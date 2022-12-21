@@ -12,7 +12,7 @@ const HeroSection = () => {
     <Wrapper>
       {/* <Overlay> */}
         <Content>
-          <h1>
+          <h1 className='my-3'>
             {/* Welcome to <span>Global Impact!</span> */}
             Welcome to Global Impact!
           </h1>

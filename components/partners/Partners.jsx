@@ -14,7 +14,7 @@ const Partners = () => {
     <>
       <Wrapper>
         <Overlay>
-          <h4>Our Partners</h4>
+          <h4 className='my-3'>Our Partners</h4>
           <Content>
             <Image src={dell} alt="logo" width="65" height="0" />
             <Image src={ibm} alt="logo" width="105" height="0" />

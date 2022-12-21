@@ -2,14 +2,14 @@ import Image from 'next/image';
 import ValueCard from '../../widgets/valueCard/ValueCard';
 
 // styles
-import { Wrapper, Overlay, Content } from './OrgValues.Styles'
+import { Wrapper, Overlay, Content } from './WhyUs.Styles'
 
 // icons
 import lock from "../../public/icons/lock.png";
 import plane from "../../public/icons/mail.png";
 import robot from "../../public/icons/robot.png";
 
-const OrgValues = () => {
+const WhyUs = () => {
   return (
     <Wrapper>
       {/* <Overlay> */}
@@ -42,4 +42,4 @@ const OrgValues = () => {
   );
 }
 
-export default OrgValues
+export default WhyUs

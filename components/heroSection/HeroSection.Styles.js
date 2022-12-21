@@ -8,6 +8,10 @@ export const Wrapper = styled.div `
   justify-content: center;
   padding-top: 60px;
 
+  a {
+    text-decoration: none;
+  }
+
 `;
 
 export const Overlay = styled.div `
@@ -60,7 +64,8 @@ export const Content = styled.div `
   }
 
   h1 {
-    margin-bottom: -1.3rem;
+    /* margin-bottom: -1.3rem; */
+    font-size: 70px;
 
     // TAB
     @media only screen and (min-width: 768px) and (max-width: 991px) {

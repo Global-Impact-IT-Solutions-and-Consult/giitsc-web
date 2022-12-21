@@ -28,7 +28,7 @@ const Footer = () => {
               </h5>
             </TopLeft>
             <TopRight>
-              <h4>Useful Links</h4>
+              <h4 className="text-white">Useful Links</h4>
               <div className="topRightBottom">
                 <Link href="/">Services</Link>
                 <Link href="/">About us</Link>
@@ -36,7 +36,9 @@ const Footer = () => {
               </div>
             </TopRight>
           </Top>
-          <Bottom>&#169; GIITSC 2022. All Rights Reserved</Bottom>
+          <Bottom className="text-white">
+            &#169; GIITSC 2022. All Rights Reserved
+          </Bottom>
         </Content>
       </Overlay>
     </Wrapper>
