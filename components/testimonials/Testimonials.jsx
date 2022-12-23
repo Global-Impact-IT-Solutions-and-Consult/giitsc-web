@@ -3,6 +3,11 @@ import TestimonialCard from "../../widgets/testimonialCard/TestimonialCard";
 // styles
 import { Content, Overlay, Wrapper } from "./Testimonials.Styles";
 
+// images
+import ayo from "../../public/testimonials/ayo.jpg";
+import may from "../../public/testimonials/may.jpg";
+import vince from "../../public/testimonials/vince.jpg";
+
 const Testimonials = () => {
   return (
     <>
@@ -11,18 +16,21 @@ const Testimonials = () => {
           <div className="heading">Some clients reviews</div>
           <Content>
             <TestimonialCard
+              image={ayo}
               name={"Magaret Jonas"}
               review={
                 "Nemo id, vitae magni dolore, cum accusamus fugiat quas beatae, dolores omnis mollitia repellendus eius."
               }
             />
             <TestimonialCard
+              image={may}
               name={"Sharon Hillary"}
               review={
                 "Nemo id, vitae magni dolore, cum accusamus fugiat quas beatae, dolores omnis mollitia repellendus eius."
               }
             />
             <TestimonialCard
+              image={vince}
               name={"Austin Franklyn"}
               review={
                 "Nemo id, vitae magni dolore, cum accusamus fugiat quas beatae, dolores omnis mollitia repellendus eius."
