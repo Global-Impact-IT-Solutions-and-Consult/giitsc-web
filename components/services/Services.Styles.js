@@ -38,12 +38,13 @@ export const Wrapper = styled.div `
 export const CardHolder = styled.div `
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
   padding: 1rem;
   /* background: red; */
-  /* width: 100%; */
-  width: 85vw;
+  width: 85%;
+  /* width: 85vw; */
   /* width: 100%; */
   margin: 0 auto;
   height: 100%;
@@ -51,8 +52,8 @@ export const CardHolder = styled.div `
 
   // TAB
   @media only screen and (min-width: 768px) and (max-width: 991px) {
-    flex-direction: column;
-    gap: 4rem;
+    /* flex-direction: column; */
+    /* gap: 4rem; */
     width: 100%;
     /* background: blue; */
   }
@@ -76,7 +77,6 @@ export const CardPair = styled.div `
 
   // MOBILE
   @media only screen and(max-width: 767px) {
-    
   }
 
   // TAB
@@ -89,7 +89,7 @@ export const CardPair = styled.div `
 
   // MOBILE
   @media only screen and (max-width: 767px) {
-   flex-direction: column;
+    flex-direction: column;
     gap: 2rem;
   }
 `;

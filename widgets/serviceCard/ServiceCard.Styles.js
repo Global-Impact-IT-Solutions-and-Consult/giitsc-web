@@ -12,8 +12,9 @@ export const Wrapper = styled.div `
   justify-content: center;
   height: 22rem;
   width: 18rem;
-  cursor: pointer;
+  /* cursor: pointer; */
   transition: all 100ms ease-in;
+  margin: 1.5rem 0;
 
   /* &:hover {
     border-bottom: 5px solid #ef2885;

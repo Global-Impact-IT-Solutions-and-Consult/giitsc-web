@@ -8,7 +8,7 @@ const TestimonialCard = ({ image, name, review }) => {
     <Wrapper>
       <Top>
         {/* <div className="image" image={image}> */}
-        <Image src={image} alt="logo" width="65" height="0" />
+        <Image src={image} alt="logo" />
         {/* </div> */}
       </Top>
       <Bottom>
