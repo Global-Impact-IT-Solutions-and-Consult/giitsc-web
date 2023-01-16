@@ -21,6 +21,7 @@ export const Wrapper = styled.div `
   width: 20rem;
   /* cursor: pointer; */
   transition: all 200ms ease-in;
+  margin: 2rem 0;
 
   &:hover {
     border-bottom: 5px solid #ef2885;
@@ -28,6 +29,11 @@ export const Wrapper = styled.div `
     /* background: black; */
     background: #404040;
     color: white;
+  }
+
+  // small PC
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    margin: 4rem 0;
   }
 
   // TAB

@@ -7,7 +7,6 @@ export const Wrapper = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
-  
 
   h4 {
     color: #fff;
@@ -24,17 +23,21 @@ export const Overlay = styled.div `
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
   background-color: rgba(32, 33, 36, 0.4);
   backdrop-filter: blur(6px);
+  /* background: red; */
 
   // TAB
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     padding-top: 0px;
+    padding: 0;
   }
 
   // MOBILE
   @media only screen and (max-width: 767px) {
     padding-top: 0px;
+    padding: 0;
   }
 `;
 
@@ -70,14 +73,17 @@ export const Content = styled.div `
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     width: 100vw;
     margin-top: 0;
+    padding: 0;
   }
 
   // MOBILE
   @media only screen and (max-width: 767px) {
-    width: 100vw;
-    padding: 0 3rem;
+    width: 100%;
+    justify-content: start;
+    /* padding: 0 3rem; */
     /* height: 3rem; */
-    gap: 3rem;
+    gap: 2rem;
+    padding: 0;
     /* margin-left: 2rem; */
   }
 `;

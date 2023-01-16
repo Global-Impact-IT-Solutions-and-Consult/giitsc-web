@@ -1,35 +1,34 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 // styles
-import { Wrapper, Overlay, Content } from './HeroSection.Styles';
+import { Wrapper, Overlay, Content } from "./HeroSection.Styles";
 
 // Components and widgets
-import { Button } from '../../widgets/buttonWidget/ButtonWidget.Styles';
-
+import { Button } from "../../widgets/buttonWidget/ButtonWidget.Styles";
 
 const HeroSection = () => {
   return (
     <Wrapper>
-      {/* <Overlay> */}
+      <Overlay>
         <Content>
-          <h1 className='my-3'>
+          <h1 className="my-3">
             {/* Welcome to <span>Global Impact!</span> */}
-            Welcome to Global Impact!
+            Technology solutions for a smarter future
           </h1>
-          <h4>We are experts in digital marketing and SEO</h4>
+          {/* <h4>We are experts in digital marketing and SEO</h4> */}
           {/* <p>Feel free to check out our services</p> */}
-          <div className="pair">
-            {/* <Link href={"/about"}>
+          {/* <div className="pair">
+          <Link href={"/about"}>
               <Button>About us</Button>
-            </Link> */}
-            <Link href={"/about"}>
-              <Button>Reach out</Button>
             </Link>
-          </div>
+          <Link href={"/about"}>
+            <Button>Reach out</Button>
+          </Link>
+        </div> */}
         </Content>
-      {/* </Overlay> */}
+      </Overlay>
     </Wrapper>
   );
-}
+};
 
-export default HeroSection
+export default HeroSection;

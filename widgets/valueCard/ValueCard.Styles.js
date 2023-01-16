@@ -19,9 +19,10 @@ export const Wrapper = styled.div `
   width: 20rem;
   cursor: pointer;
   transition: all 100ms ease-in;
+  margin: 2rem 0;
 
   &:hover {
-    border-bottom: 5px solid #ef2885;
+    border-bottom: 5px solid #011729;
     box-shadow: 0px 4px 24px rgba(239, 40, 133, 0.15);
   }
 `;

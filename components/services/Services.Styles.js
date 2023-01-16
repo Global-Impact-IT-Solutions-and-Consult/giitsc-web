@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div `
   /* background: url("/images/eroWw.jpg"); */
-  background-color: white;
+  background: #e8f5ff;
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -13,14 +13,25 @@ export const Wrapper = styled.div `
   padding: 2rem 0;
 
   .heading {
-    font-size: 50px;
-    font-weight: 700;
-    color: #2772b3;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 49px;
+    color: #1a1110;
+    border-bottom: 5px solid #1a1110;
+    padding-bottom: 0.4rem;
+    border-radius: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    transition: all 300ms ease-in;
 
     :hover {
-      background: -webkit-linear-gradient(#2772b3, #ee2583);
+      /* background: -webkit-linear-gradient(#2772b3, #ee2583);
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      -webkit-text-fill-color: transparent; */
+      border-bottom: 5px dashed #1a1110;
+      padding-bottom: 0.2rem;
     }
 
     // TAB
@@ -49,6 +60,11 @@ export const CardHolder = styled.div `
   margin: 0 auto;
   height: 100%;
   /* background: blue; */
+
+  // small PC
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    width: 100%;
+  }
 
   // TAB
   @media only screen and (min-width: 768px) and (max-width: 991px) {

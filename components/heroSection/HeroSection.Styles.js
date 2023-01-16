@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div `
   /* background-color: blue; */
-  /* background: url("/images/herobg.jpg"); */
+  background: url("/heroBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -11,17 +13,17 @@ export const Wrapper = styled.div `
   a {
     text-decoration: none;
   }
-
 `;
 
 export const Overlay = styled.div `
-  background-color: rgba(0, 0, 0, 0.4);
-  height: 120%;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* height: 120%; */
   width: 100%;
   margin-top: -60px;
-  padding-top: 60px;
+  /* padding-top: 60px; */
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
 
   // TAB
@@ -51,6 +53,8 @@ export const Content = styled.div `
   flex-wrap: wrap;
   text-align: center;
   /* background: green; */
+  width: 546px;
+  /* height: 118px; */
 
   // TAB
   @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -65,7 +69,21 @@ export const Content = styled.div `
 
   h1 {
     /* margin-bottom: -1.3rem; */
-    font-size: 70px;
+    /* font-size: 48px;
+    font-family: Montserrat;
+    line-height: 58.51px;
+    font-weight: 800;
+    text-align: center; */
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    /* font-family: "Montserrat"; */
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 59px;
+    text-align: center;
 
     // TAB
     @media only screen and (min-width: 768px) and (max-width: 991px) {

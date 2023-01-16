@@ -48,6 +48,7 @@ export const Overlay = styled.div `
   height: 100%;
   width: 100%;
   display: flex;
+  padding-top: 2rem;
   gap: 5rem;
   flex-direction: column;
   align-items: center;
@@ -56,8 +57,9 @@ export const Overlay = styled.div `
   // TAB
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     height: 105%;
-    margin-top: -10px;
+    margin-top: 3rem;
     padding-top: 0px;
+    gap: 3rem;
   }
 
   // MOBILE
@@ -80,8 +82,14 @@ export const Content = styled.div `
   /* background: yellow; */
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   gap: 1rem;
   margin: 1rem;
+
+  // small PC
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    width: 100%;
+  }
 
   // TAB
   @media only screen and (min-width: 768px) and (max-width: 991px) {

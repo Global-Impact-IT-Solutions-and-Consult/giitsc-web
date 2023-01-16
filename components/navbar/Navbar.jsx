@@ -1,17 +1,16 @@
-import React from 'react'
-import Link from 'next/link';
-import Image from 'next/image';
-import Head from 'next/head';
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import Head from "next/head";
 
 // Styles
-import { Wrapper } from './Navbar.Styles';
+import { Wrapper } from "./Navbar.Styles";
 
 // logo
-import logo from "../../public/images/GIITSC_LOGO.png"
-
+// import logo from "../../public/images/GIITSC_LOGO.png"
+import logo from "../../public/giitscLogo.png";
 
 const Navbar = () => {
-
   return (
     <>
       <Wrapper>
@@ -47,6 +46,6 @@ const Navbar = () => {
       </Wrapper>
     </>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

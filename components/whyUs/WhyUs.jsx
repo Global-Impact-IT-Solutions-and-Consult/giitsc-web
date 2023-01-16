@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import ValueCard from '../../widgets/valueCard/ValueCard';
+import Image from "next/image";
+import ValueCard from "../../widgets/valueCard/ValueCard";
 
 // styles
-import { Wrapper, Overlay, Content } from './WhyUs.Styles'
+import { Wrapper, Overlay, Content } from "./WhyUs.Styles";
 
 // icons
 import lock from "../../public/icons/lock.png";
@@ -36,10 +36,17 @@ const WhyUs = () => {
             "Nemo id, vitae magni dolore, cum accusamus fugiat quas beatae, dolores omnis mollitia repellendus eius."
           }
         />
+        <ValueCard
+          icon={robot}
+          title={"Automate Workflow"}
+          description={
+            "Nemo id, vitae magni dolore, cum accusamus fugiat quas beatae, dolores omnis mollitia repellendus eius."
+          }
+        />
       </Content>
       {/* </Overlay> */}
     </Wrapper>
   );
-}
+};
 
-export default WhyUs
+export default WhyUs;

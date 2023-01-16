@@ -14,19 +14,21 @@ export const Wrapper = styled.div `
     align-items: center;
     justify-content: space-between;
     color: #3e89dc;
-    height: 50px;
-    padding: 1em;
+    height: 86px;
+    padding: 1em 5rem;
     position: fixed;
     perspective: 1000px;
     z-index: 1;
-    width: 90vw;
+    /* width: 90vw; */
+    width: 99%;
     margin: 0 auto;
     min-height: 60px;
-    background-color: rgba(0, 0, 0, 0.75);
+    /* background-color: rgba(0, 0, 0, 0.75); */
+    background: rgba(1, 23, 41, 0.62);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 15px -6px #424242;
-    border-radius: 21px;
-    margin-top: 1rem;
+    /* border-radius: 21px; */
+    /* margin-top: 1rem; */
 
     // TAB
     @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -63,10 +65,18 @@ export const Wrapper = styled.div `
   }
 
   ul li a {
-    font-size: 1.3rem;
     text-decoration: none;
     position: relative;
-    font-family: sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 16px;
+    text-align: center;
+
+    color: #ffffff;
   }
 
   ul li a::before {
