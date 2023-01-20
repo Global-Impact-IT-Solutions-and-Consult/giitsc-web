@@ -1,39 +1,39 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div `
-  /* background: #141517; */
-  background: #fff;
   color: #141517;
-  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
   border-radius: 21px;
-  padding: 1rem;
-  padding-bottom: 1.5rem;
-  /* background-color: red; */
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  height: 22rem;
-  /* overflow-y: scroll; */
-  width: 20rem;
-  cursor: pointer;
-  transition: all 100ms ease-in;
-  margin: 2rem 0;
+  height: 12rem;
+  width: 15rem;
+  transition: all 300ms ease-in;
 
-  &:hover {
-    border-bottom: 5px solid #011729;
-    box-shadow: 0px 4px 24px rgba(239, 40, 133, 0.15);
-  }
+  /* &:hover {
+    border-bottom: 3px solid #011729;
+    border-top: 3px solid #011729;
+  } */
 `;
 
 export const Top = styled.div `
-  /* background-color: red; */
+  background-color: var(--theme-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40%;
-  width: 100%;
+  height: 50%;
+  width: 74.85px;
+  height: 59.61px;
+  border-radius: 10px;
+  padding: 1rem;
+
+  /* img {
+    width: 74.85px;
+    height: 59.61px;
+  } */
 `;
 
 export const Bottom = styled.div `
@@ -45,20 +45,18 @@ export const Bottom = styled.div `
   justify-content: center;
   padding: 1rem;
   text-align: center;
-  height: 60%;
+  height: 50%;
   width: 100%;
 
-  .title {
-    font-size: 23px;
-    font-weight: 500;
-  }
-
-  .description {
-    font-size: 17px;
+  .text {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
     font-weight: 400;
-    color: grey;
-    /* background: red; */
-    padding: 0.5rem;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+
+    color: #1a1110;
 
     // TAB
     @media only screen and (min-width: 768px) and (max-width: 991px) {

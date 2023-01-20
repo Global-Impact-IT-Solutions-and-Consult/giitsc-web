@@ -8,7 +8,7 @@ export const Wrapper = styled.div `
   /* background: whitesmoke; */
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -57,7 +57,7 @@ export const Content = styled.div `
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 1rem;
-  margin: 1rem;
+  margin: 2.5rem 1rem;
 
   // small PC
   @media only screen and (min-width: 992px) and (max-width: 1199px) {

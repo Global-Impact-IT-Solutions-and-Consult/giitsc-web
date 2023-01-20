@@ -1,20 +1,19 @@
 import Image from "next/image";
 
 // Styles
-import { Bottom, Top, Wrapper } from "./ValueCard.Styles"
+import { Bottom, Top, Wrapper } from "./ValueCard.Styles";
 
-const ValueCard = ({icon, title, description}) => {
+const ValueCard = ({ icon, text }) => {
   return (
     <Wrapper>
       <Top>
-        <Image src={icon} alt="logo" width="65" height="0" />
+        <Image src={icon} alt="logo" height="0" />
       </Top>
       <Bottom>
-        <div className="title">{title}</div>
-        <div className="description">{description}</div>
+        <div className="text">{text}</div>
       </Bottom>
     </Wrapper>
   );
-}
+};
 
-export default ValueCard
+export default ValueCard;

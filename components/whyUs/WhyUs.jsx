@@ -5,9 +5,10 @@ import ValueCard from "../../widgets/valueCard/ValueCard";
 import { Wrapper, Overlay, Content } from "./WhyUs.Styles";
 
 // icons
-import lock from "../../public/icons/lock.png";
-import plane from "../../public/icons/mail.png";
-import robot from "../../public/icons/robot.png";
+import clock from "../../public/icons/whyUs/clock.png";
+import rate from "../../public/icons/whyUs/rate.png";
+import risk from "../../public/icons/whyUs/risk.png";
+import work from "../../public/icons/whyUs/work.png";
 
 const WhyUs = () => {
   return (
@@ -15,34 +16,10 @@ const WhyUs = () => {
       {/* <Overlay> */}
       <div className="heading">Why GIITSC?</div>
       <Content>
-        <ValueCard
-          icon={lock}
-          title={"Fully Secured"}
-          description={
-            "Nemo id, vitae magni dolore, cum accusamus fugiat quas beatae, dolores omnis mollitia repellendus eius."
-          }
-        />
-        <ValueCard
-          icon={plane}
-          title={"Simplify Communication"}
-          description={
-            "Nemo id, vitae magni dolore, cum accusamus fugiat quas beatae, dolores omnis mollitia repellendus eius."
-          }
-        />
-        <ValueCard
-          icon={robot}
-          title={"Automate Workflow"}
-          description={
-            "Nemo id, vitae magni dolore, cum accusamus fugiat quas beatae, dolores omnis mollitia repellendus eius."
-          }
-        />
-        <ValueCard
-          icon={robot}
-          title={"Automate Workflow"}
-          description={
-            "Nemo id, vitae magni dolore, cum accusamus fugiat quas beatae, dolores omnis mollitia repellendus eius."
-          }
-        />
+        <ValueCard icon={work} text={"Fast-paced, dynamic work environment"} />
+        <ValueCard icon={rate} text={"Positive impact on the world"} />
+        <ValueCard icon={risk} text={"access to specialized expertise"} />
+        <ValueCard icon={clock} text={"Save cost and time on projects"} />
       </Content>
       {/* </Overlay> */}
     </Wrapper>

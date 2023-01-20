@@ -1,34 +1,77 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div `
-  /* background: #141517; */
-  background: #fff;
-  /* background: #404040; */
-  /* background: black; */
   color: #141517;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
   border-radius: 21px;
-  padding: 1rem;
+  padding: 0 2rem;
   padding-bottom: 1.5rem;
-  /* background-color: red; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  height: 22rem;
-  /* overflow-y: scroll; */
-  width: 20rem;
-  /* cursor: pointer; */
+  gap: 1.5rem;
+  height: 15rem;
+  width: 24rem;
   transition: all 200ms ease-in;
   margin: 2rem 0;
+  position: relative;
+  background: #ffffff;
+  box-shadow: 0px 6.28542px 30.5292px 0.897917px rgba(0, 0, 0, 0.09);
+  border-radius: 5.3875px;
 
   &:hover {
-    border-bottom: 5px solid #ef2885;
-    box-shadow: 0px 4px 24px rgba(239, 40, 133, 0.15);
-    /* background: black; */
-    background: #404040;
+    background: var(--theme-color);
     color: white;
+  }
+
+  .text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12.5708px;
+    line-height: 15px;
+    text-align: center;
+  }
+
+  .bottom {
+    /* background: red; */
+    width: 50%;
+    padding: 0 1rem;
+    position: absolute;
+    margin-bottom: -18rem;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: -75px; */
+
+    img {
+      /* background: yellow; */
+      /* width: 8rem; */
+      object-fit: cover;
+      border-radius: 50%;
+      /* height: 100%; */
+    }
+
+    .bottomPair {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .name {
+      color: black;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .title {
+      color: grey;
+      font-size: 12px;
+      font-weight: 300;
+    }
   }
 
   // small PC
@@ -39,16 +82,6 @@ export const Wrapper = styled.div `
   // TAB
   @media (max-width: 768px) {
     margin: 4rem 0;
-  }
-
-  .name {
-    /* color: grey; */
-    font-size: 23px;
-    font-weight: 500;
-
-    /* &:hover {
-      color: black;
-    } */
   }
 
   .review {
@@ -72,7 +105,8 @@ export const Top = styled.div `
   /* display: relative; */
   width: 8rem;
   height: 8rem;
-  margin-top: -8rem;
+  /* margin-top: -8rem; */
+  margin-top: 110%;
   border-radius: 50%;
   border: 2px solid var(--accent-color);
   overflow: hidden;

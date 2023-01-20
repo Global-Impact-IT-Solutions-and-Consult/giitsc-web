@@ -13,7 +13,7 @@ const Testimonials = () => {
     <>
       <Wrapper>
         <Overlay>
-          <div className="heading">Some clients reviews</div>
+          <div className="heading">What our clients are saying</div>
           <Content>
             <TestimonialCard
               image={ayo}
