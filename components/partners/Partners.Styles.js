@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div `
-  /* background: url("/images/ero.jpg"); */
-  /* background-color: blue; */
-  height: 40vh;
+  background: #fff;
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,9 +42,13 @@ export const Overlay = styled.div `
 
 export const Content = styled.div `
   /* background: url("/images/ero.jpg"); */
+  background: url("/icons/partners/partners.png");
   /* background-color: blue; */
-  width: 80%;
-  height: 8rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 85%;
+  height: 100%;
   overflow-x: auto;
   overflow-y: hidden;
   display: flex;

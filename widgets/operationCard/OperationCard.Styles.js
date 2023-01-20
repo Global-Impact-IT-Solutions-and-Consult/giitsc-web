@@ -16,7 +16,7 @@ export const Wrapper = styled.div `
   border-radius: 7px;
   width: 307px;
   height: 220px;
-  /* transition: all 300ms ease-in; */
+  transition: all 300ms ease-in;
   text-align: left;
 
   &:hover {

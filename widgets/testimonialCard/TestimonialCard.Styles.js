@@ -13,7 +13,7 @@ export const Wrapper = styled.div `
   gap: 1.5rem;
   height: 15rem;
   width: 24rem;
-  transition: all 200ms ease-in;
+  transition: all 300ms ease-in;
   margin: 2rem 0;
   position: relative;
   background: #ffffff;
@@ -23,6 +23,7 @@ export const Wrapper = styled.div `
   &:hover {
     background: var(--theme-color);
     color: white;
+    transform: translateY(-40px);
   }
 
   .text {

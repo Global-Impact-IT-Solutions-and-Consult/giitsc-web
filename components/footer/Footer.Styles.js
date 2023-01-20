@@ -4,6 +4,8 @@ export const Wrapper = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #10121a;
+  padding: 2rem;
 
   a {
     text-decoration: none;
@@ -60,6 +62,86 @@ export const Top = styled.div `
   gap: 1rem;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 0;
+
+  .pair {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.77777rem;
+    text-align: center;
+    /* background: yellow; */
+    width: 40rem;
+  }
+
+  .address {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 21px;
+    color: #ffffff;
+    text-align: center;
+    /* background: red; */
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .heading {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 21px;
+    color: #ffffff;
+    text-align: center;
+    /* background: red; */
+    width: 80%;
+    margin: 0 auto;
+    margin-left: 2.5rem;
+  }
+
+  .bottom {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    color: grey;
+
+    ul {
+      list-style: none;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    li  {
+      text-align: center;
+      margin-bottom: 0.5rem;
+      color: grey;
+      transition: all 300ms ease-in;
+    }
+
+    li a {
+      text-align: center;
+      margin-bottom: 0.5rem;
+      color: grey;
+      transition: all 300ms ease-in;
+
+      &:hover {
+        color: #fff;
+        border-bottom: 1px solid white;ss
+      }
+    }
+  }
 
   // TAB
   @media only screen and(min-width: 768px) and (max-width: 991px) {

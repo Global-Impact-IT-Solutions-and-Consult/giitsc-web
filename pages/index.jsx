@@ -7,6 +7,7 @@ import Services from "../components/services/Services";
 import Testimonials from "../components/testimonials/Testimonials";
 import AboutNumbers from "../components/aboutNumbers/AboutNumbers";
 import Operations from "../components/operations/Operations";
+import Subscribe from "../components/subscribe/Subscribe";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Operations />
       <Testimonials />
       <Partners />
+      <Subscribe />
       <Footer />
     </>
   );

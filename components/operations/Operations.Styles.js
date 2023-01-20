@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const Wrapper = styled.div `
   /* background: url("/images/eroWw.jpg"); */
   background: #fff;
-  min-height: 100vh;
+  /* background: red; */
+  min-height: 90vh;
   width: 100%;
   display: flex;
   gap: 4rem;
@@ -11,7 +12,6 @@ export const Wrapper = styled.div `
   justify-content: center;
   align-items: center;
   padding: 2rem 0;
-  padding-bottom: 4rem;
 
   .heading {
     font-style: normal;
