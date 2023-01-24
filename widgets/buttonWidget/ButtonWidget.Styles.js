@@ -10,22 +10,21 @@ export const Button = styled.button `
   align-items: center;
   justify-content: center;
   background-color: ${(props) => props.color || "transparent"};
-  color: white;
-  /* font-family: "Inter"; */
-  font-family: system-ui, "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 15px;
+  line-height: 15px;
+  color: #ffffff;
   cursor: pointer;
-  /* border: 2px solid white; */
   border: none;
 
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right,
     #4776e6 0%,
     #8e54e9 51%,
     #4776e6 100%
-  );
+  ); */
   margin: 10px;
   padding: 15px 45px;
   text-align: center;
@@ -61,7 +60,14 @@ export const Button = styled.button `
 
   // MOBILE
   @media only screen and (max-width: 767px) {
-    width: ${(props) => props.width || "350px"};
+    width: "35px"};
     height: ${(props) => props.height || "40px"};
+  }
+
+  //MOBILE
+  @media only screen and (max-width: 767px) {
+    width: 95%;
+    /* padding: 2rem 0.5rem; */
+    justify-content: center;
   }
 `;

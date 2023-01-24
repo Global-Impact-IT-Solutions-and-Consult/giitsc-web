@@ -1,14 +1,12 @@
-import React from 'react'
+import React from "react";
+import AboutComponent from "../components/aboutComponent/AboutComponent";
 
 const About = () => {
   return (
     <>
-      <div>About</div>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel adipisci
-      maiores est deleniti accusamus ex quas, error at tempora omnis beatae
-      autem non ut dolore. Quasi maxime necessitatibus vitae ipsam!
+      <AboutComponent />
     </>
   );
-}
+};
 
-export default About
+export default About;

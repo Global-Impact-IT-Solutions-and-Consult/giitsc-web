@@ -3,6 +3,7 @@ import Navbar from "./navbar/Navbar";
 
 // styles
 import { Wrapper, Overlay } from "./Layout.Styles";
+import Footer from "./footer/Footer";
 
 const Layout = ({ children }) => {
   return (
@@ -11,6 +12,7 @@ const Layout = ({ children }) => {
         <Overlay>
           <Navbar />
           {children}
+          <Footer />
         </Overlay>
       </Wrapper>
     </>

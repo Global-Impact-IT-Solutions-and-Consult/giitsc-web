@@ -250,6 +250,7 @@ export const Bottom = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 2px solid #2693f6;
+  /* border-top: 2px solid #2693f6; */
+  border-top: 2px solid #fff;
   padding: 2rem;
 `;

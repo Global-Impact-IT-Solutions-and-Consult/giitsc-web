@@ -10,11 +10,11 @@ import rate from "../../public/icons/whyUs/rate.png";
 import risk from "../../public/icons/whyUs/risk.png";
 import work from "../../public/icons/whyUs/work.png";
 
-const WhyUs = () => {
+const WhyUs = ({ title }) => {
   return (
     <Wrapper>
       {/* <Overlay> */}
-      <div className="heading">Why GIITSC?</div>
+      <div className="heading">{title}</div>
       <Content>
         <ValueCard icon={work} text={"Fast-paced, dynamic work environment"} />
         <ValueCard icon={rate} text={"Positive impact on the world"} />

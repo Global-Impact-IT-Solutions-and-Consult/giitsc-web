@@ -33,13 +33,47 @@ const Navbar = () => {
               <Link href="/">Home</Link>
             </li>
             <li>
+              <Link href="#">Service &#9660;</Link>
+              <div className="services">
+                <ul>
+                  <li>
+                    <Link href="/mobile">Mobile Development</Link>
+                  </li>
+                  <li>
+                    <Link href="/networking">Networking</Link>
+                  </li>
+                  <li>
+                    <Link href="/pm">Project Management</Link>
+                  </li>
+                  <li>
+                    <Link href="/training">Training</Link>
+                  </li>
+                  <li>
+                    <Link href="/web">Web Development</Link>
+                  </li>
+                  <li>
+                    <Link href="/marketing">Digital Marketing</Link>
+                  </li>
+                </ul>
+              </div>
+              {/* <div className="dropdown">
+                <button className="dropbtn">
+                  Dropdown
+                  <i className="fa fa-caret-down"></i>
+                </button>
+                <div className="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+              </div> */}
+            </li>
+
+            <li>
               <Link href="/about">About us</Link>
             </li>
             <li>
-              <Link href="/stream">Services</Link>
-            </li>
-            <li>
-              <Link href="/leaderboard">Contact</Link>
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
         </section>

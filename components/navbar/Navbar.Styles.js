@@ -61,22 +61,20 @@ export const Wrapper = styled.div `
   }
 
   ul li {
-    padding: 5px 10px;
+    padding: 10px 10px;
   }
 
   ul li a {
     text-decoration: none;
     position: relative;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 13px;
     line-height: 16px;
-    text-align: center;
-
-    color: #ffffff;
+    padding-bottom: 0.3rem;
   }
 
   ul li a::before {
@@ -101,6 +99,7 @@ export const Wrapper = styled.div `
     list-style-type: none;
     margin: 0;
     padding: 0;
+    position: relative;
   }
 
   .menu > li {
@@ -191,6 +190,64 @@ export const Wrapper = styled.div `
   #menu-toggle:checked + .menu-button-container .menu-button::after {
     margin-top: 0px;
     transform: rotate(-405deg);
+  }
+
+  .services {
+    height: 260px;
+    /* background: pink; */
+    z-index: 2;
+    position: absolute;
+    padding: 1rem;
+    padding-right: 5rem;
+    margin-top: -1.5rem;
+    margin-left: -2rem;
+    width: 5rem;
+
+    ul {
+      display: none;
+      /* background: red; */
+      list-style: none;
+      text-decoration: none;
+      padding-top: 3rem;
+      /* display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      justify-content: center;
+      align-items: center;
+      text-align: center; */
+    }
+
+    li {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: #fff;
+      background: rgba(1, 23, 41, 0.62);
+      backdrop-filter: blur(20px);
+      /* box-shadow: 0 0 15px -6px #424242; */
+      width: 10em;
+      margin-bottom: 0.5rem;
+      margin-left: -4rem;
+      padding: 0.7rem 1rem;
+      border-radius: 7px;
+    }
+
+    li a {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    &:hover {
+      ul {
+        display: block;
+      }
+    }
   }
 
   @media (max-width: 1000px) {

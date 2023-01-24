@@ -15,12 +15,12 @@ export default function Home() {
       <HeroSection />
       <AboutNumbers />
       <Services />
-      <WhyUs />
+      <WhyUs title={"Why Us?"} />
       <Operations />
       <Testimonials />
       <Partners />
       <Subscribe />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
