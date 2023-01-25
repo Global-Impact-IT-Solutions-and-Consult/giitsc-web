@@ -4,6 +4,7 @@ import Navbar from "./navbar/Navbar";
 // styles
 import { Wrapper, Overlay } from "./Layout.Styles";
 import Footer from "./footer/Footer";
+import NavbarRedo from "./navbar/NavbarRedo";
 
 const Layout = ({ children }) => {
   return (
@@ -11,6 +12,7 @@ const Layout = ({ children }) => {
       <Wrapper>
         <Overlay>
           <Navbar />
+          {/* <NavbarRedo /> */}
           {children}
           <Footer />
         </Overlay>

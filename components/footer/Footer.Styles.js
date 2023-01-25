@@ -52,6 +52,7 @@ export const Content = styled.div `
   // MOBILE
   @media only screen and (max-width: 767px) {
     width: 100%;
+    text-align: center;
   }
 `;
 

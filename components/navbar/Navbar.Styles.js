@@ -192,8 +192,26 @@ export const Wrapper = styled.div `
     transform: rotate(-405deg);
   }
 
+  .serviceHead {
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    padding-bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+    /* background: red; */
+    margin-top: 0.4rem;
+    cursor: pointer;
+  }
+
   .services {
-    height: 260px;
+    height: 320px;
     /* background: pink; */
     z-index: 2;
     position: absolute;
@@ -302,12 +320,13 @@ export const Wrapper = styled.div `
       width: 100%;
       color: var(--text-white);
       background-color: rgba(0, 0, 0, 0.75);
-      /* background-color: var(--themeColor); */
+      /* background-color: var(--theme-color); */
     }
 
     .menu > li a {
       text-decoration: none;
       color: var(--text-white);
+      color: yellow;
     }
 
     .menu > li a:hover {
