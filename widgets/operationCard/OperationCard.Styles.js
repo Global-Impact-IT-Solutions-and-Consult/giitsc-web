@@ -9,7 +9,7 @@ export const Wrapper = styled.div `
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* cursor: pointer; */
+  cursor: crosshair;
   /* margin: 1.5rem 0; */
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.11);
@@ -32,6 +32,9 @@ export const Wrapper = styled.div `
   @media only screen and (max-width: 767px) {
     font-size: 45px;
     height: 25rem;
+    /* background: blue; */
+    height: 100%;
+    text-align: center;
   }
 `;
 
@@ -41,6 +44,11 @@ export const Top = styled.div `
   gap: 0.4rem;
   align-items: start;
   padding: 1rem;
+
+  // MOBILE
+  @media only screen and (max-width: 767px) {
+    align-items: center;
+  }
 
   .icon {
     background: var(--theme-color);

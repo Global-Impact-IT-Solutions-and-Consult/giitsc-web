@@ -18,13 +18,14 @@ export const Wrapper = styled.div `
     padding: 1em 5rem;
     position: fixed;
     /* perspective: 1000px; */
-    z-index: 10;
+    z-index: 5;
     /* width: 90vw; */
     width: 100%;
     margin: 0 auto;
     min-height: 60px;
     /* background-color: rgba(0, 0, 0, 0.75); */
     background: rgba(1, 23, 41, 0.62);
+    background: var(--theme-color);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 15px -6px #424242;
     /* border-radius: 21px; */

@@ -11,6 +11,11 @@ export const Wrapper = styled.div `
     text-decoration: none;
     color: inherit;
   }
+
+  // MOBILE
+  @media only screen and (max-width: 767px) {
+    /* background: red; */
+  }
 `;
 
 export const Overlay = styled.div `
@@ -53,29 +58,42 @@ export const Content = styled.div `
   @media only screen and (max-width: 767px) {
     width: 100%;
     text-align: center;
+    /* background: red; */
   }
 `;
 
 export const Top = styled.div `
   /* background-color: yellow; */
-  width: 100%;
+  width: 90%;
   display: flex;
   gap: 1rem;
   justify-content: space-between;
   align-items: top;
   padding: 1rem 0;
-  /* text-align: left; */
-  /* text-align: start; */
+  margin-left: 10rem;
+
+  // MOBILE
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 0rem;
+    gap: 2rem;
+    /* background: red; */
+  }
 
   .pair {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
     gap: 0.77777rem;
-    /* text-align: start; */
-    /* background: yellow; */
     width: 40rem;
+
+    // MOBILE
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+
+      /* background: red; */
+    }
   }
 
   .address {
@@ -85,10 +103,13 @@ export const Top = styled.div `
     font-size: 17px;
     line-height: 21px;
     color: #ffffff;
-    /* text-align: center; */
-    /* background: red; */
     width: 80%;
-    /* margin: 0 auto; */
+
+    // MOBILE
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+      /* background: green; */
+    }
   }
 
   .heading {
@@ -98,12 +119,13 @@ export const Top = styled.div `
     font-size: 17px;
     line-height: 21px;
     color: #ffffff;
-    /* text-align: center; */
-    /* background: red; */
     width: 80%;
-    /* margin: 0 auto; */
-    /* margin-left: 2.5rem; */
-    /* border-bottom: 1px solid #fff; */
+
+    // MOBILE
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+      /* background: yellow; */
+    }
   }
 
   .bottom {
@@ -113,10 +135,14 @@ export const Top = styled.div `
     font-size: 15px;
     line-height: 18px;
     width: 80%;
-    /* margin: 0 auto; */
-    /* text-align: center; */
     color: grey;
-    /* background: red; */
+
+    // MOBILE
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+      text-align: center;
+      /* background: yellow; */
+    }
 
     ul {
       /* background: green; */
@@ -145,17 +171,6 @@ export const Top = styled.div `
         border-bottom: 1px solid white;
       }
     }
-  }
-
-  // TAB
-  @media only screen and(min-width: 768px) and (max-width: 991px) {
-  }
-
-  // MOBILE
-  @media only screen and (max-width: 767px) {
-    padding-top: 1rem;
-    flex-direction: column;
-    gap: 0;
   }
 `;
 

@@ -16,6 +16,11 @@ export const Content = styled.div `
   display: flex;
   align-items: center;
   padding-left: 9rem;
+
+  // MOBILE
+  @media only screen and (max-width: 767px) {
+    padding-left: 0;
+  }
 `;
 
 export const Left = styled.div `
@@ -32,6 +37,12 @@ export const Left = styled.div `
   flex-direction: column;
   align-items: start;
   position: relative;
+
+  // MOBILE
+  @media only screen and (max-width: 767px) {
+    width: 90%;
+    margin: 0 auto;
+  }
 
   .text {
     width: 155px;

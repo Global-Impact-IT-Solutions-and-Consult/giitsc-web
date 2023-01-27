@@ -13,44 +13,11 @@ export const Wrapper = styled.div `
   align-items: center;
   padding: 2rem 0;
 
-  .heading {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 49px;
-    color: #1a1110;
-    border-bottom: 5px solid #1a1110;
-    padding-bottom: 0.4rem;
-    border-radius: 5px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
-    transition: all 300ms ease-in;
-
-    :hover {
-      /* background: -webkit-linear-gradient(#2772b3, #ee2583);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; */
-      border-bottom: 5px dashed #1a1110;
-      padding-bottom: 0.2rem;
-    }
-
-    // TAB
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-      gap: 4rem;
-    }
-
-    // MOBILE
-    @media only screen and (max-width: 767px) {
-      gap: 2rem;
-    }
-  }
-
-  .line1 {
-    background-color: var(--theme-color);
-    width: 3rem;
-    height: 2rem;
-    margin: 0 auto;
+  // MOBILE
+  @media only screen and (max-width: 767px) {
+    /* background: red; */
+    gap: 2rem;
+    padding-bottom: 5rem;
   }
 `;
 
@@ -84,36 +51,38 @@ export const CardHolder = styled.div `
 
   // MOBILE
   @media only screen and (max-width: 767px) {
+    width: 90%;
+    /* background: red; */
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
   }
 `;
 
-export const CardPair = styled.div `
-  display: flex;
-  gap: 2rem;
-  width: 50%;
-  align-items: center;
+// export const CardPair = styled.div `
+//   display: flex;
+//   gap: 2rem;
+//   width: 50%;
+//   align-items: center;
 
-  // TAB
-  @media only screen and(min-width: 768px) and(max-width: 991px) {
-  }
+//   // TAB
+//   @media only screen and(min-width: 768px) and(max-width: 991px) {
+//   }
 
-  // MOBILE
-  @media only screen and(max-width: 767px) {
-  }
+//   // MOBILE
+//   @media only screen and(max-width: 767px) {
+//   }
 
-  // TAB
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    /* flex-direction: column; */
-    justify-content: center;
-    gap: 2rem;
-    width: 100%;
-  }
+//   // TAB
+//   @media only screen and (min-width: 768px) and (max-width: 991px) {
+//     /* flex-direction: column; */
+//     justify-content: center;
+//     gap: 2rem;
+//     width: 100%;
+//   }
 
-  // MOBILE
-  @media only screen and (max-width: 767px) {
-    flex-direction: column;
-    gap: 2rem;
-  }
-`;
+//   // MOBILE
+//   @media only screen and (max-width: 767px) {
+//     flex-direction: column;
+//     gap: 2rem;
+//   }
+// `;

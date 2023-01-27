@@ -8,7 +8,7 @@ export const Wrapper = styled.div `
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  cursor: pointer;
+  cursor: crosshair;
   margin: 1.5rem 0;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.11);
@@ -17,6 +17,11 @@ export const Wrapper = styled.div `
   height: 210px;
   transition: all 300ms ease-in;
   text-align: left;
+
+  // MOBILE
+  @media only screen and (max-width: 767px) {
+    height: 100%;
+  }
 
   &:hover {
     background: #011729;
@@ -31,17 +36,6 @@ export const Wrapper = styled.div `
       /* padding: 0.2rem; */
     }
   }
-
-  // TAB
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    /* width: 35rem; */
-  }
-
-  // MOBILE
-  @media only screen and (max-width: 767px) {
-    font-size: 45px;
-    height: 25rem;
-  }
 `;
 
 export const Top = styled.div `
@@ -50,6 +44,11 @@ export const Top = styled.div `
   gap: 0.4rem;
   align-items: start;
   padding: 1rem;
+
+  // MOBILE
+  @media only screen and (max-width: 767px) {
+    align-items: center;
+  }
 
   .icon {
     /* background: yellow; */
@@ -74,6 +73,13 @@ export const Bottom = styled.div `
     font-size: 20px;
     line-height: 24px;
     text-align: left;
+
+    // MOBILE
+    @media only screen and (max-width: 767px) {
+      /* background: red; */
+      width: 100%;
+      text-align: center;
+    }
   }
 
   .description {
@@ -81,5 +87,12 @@ export const Bottom = styled.div `
     font-weight: 600;
     font-size: 11px;
     line-height: 13px;
+
+    // MOBILE
+    @media only screen and (max-width: 767px) {
+      /* background: red; */
+      width: 100%;
+      text-align: center;
+    }
   }
 `;

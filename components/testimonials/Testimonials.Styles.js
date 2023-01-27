@@ -3,40 +3,16 @@ import styled from "styled-components";
 export const Wrapper = styled.div `
   background-position: center;
   background: white;
+  /* background: red; */
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  /* padding: 2rem 0; */
-
-  .heading {
-    font-size: 50px;
-    font-weight: 700;
-    color: #2772b3;
-    text-align: center;
-    /* padding-bottom: -2rem; */
-
-    :hover {
-      background: -webkit-linear-gradient(#2772b3, #ee2583);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    // TAB
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-      font-size: 45px;
-    }
-
-    // MOBILE
-    @media only screen and (max-width: 767px) {
-      font-size: 45px;
-      padding-top: 4rem;
-      padding-bottom: -2rem;
-    }
-  }
+  gap: 2rem;
+  padding: 3rem 0;
 `;
 
 export const Overlay = styled.div `
@@ -72,18 +48,11 @@ export const Overlay = styled.div `
 `;
 
 export const Content = styled.div `
-  /* background: url("/images/testimonialBG.png"); */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  /* height: 100%; */
   width: 85%;
-  padding: 2rem;
+  padding: 3rem 2rem;
   /* background: yellow; */
   display: flex;
   justify-content: space-evenly;
-  /* justify-content: center; */
-  /* flex-wrap: wrap; */
   gap: 9rem;
   margin: 1rem;
   position: relative;
@@ -102,7 +71,9 @@ export const Content = styled.div `
   @media only screen and (max-width: 767px) {
     width: 100%;
     flex-direction: column;
-    gap: 1rem;
+    gap: 20rem;
     align-items: center;
+    /* background: red; */
+    padding: 0rem;
   }
 `;

@@ -13,37 +13,10 @@ export const Wrapper = styled.div `
   padding: 2rem 0;
   padding-bottom: 4rem;
 
-  .heading {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 49px;
-    color: #1a1110;
-    border-bottom: 5px solid #1a1110;
-    padding-bottom: 0.4rem;
-    border-radius: 5px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
-    transition: all 300ms ease-in;
-
-    :hover {
-      /* background: -webkit-linear-gradient(#2772b3, #ee2583);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; */
-      border-bottom: 5px dashed #1a1110;
-      padding-bottom: 0.2rem;
-    }
-
-    // TAB
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-      gap: 4rem;
-    }
-
-    // MOBILE
-    @media only screen and (max-width: 767px) {
-      gap: 2rem;
-    }
+  // MOBILE
+  @media only screen and (max-width: 767px) {
+    gap: 1.5rem;
+    padding-top: 4rem;
   }
 `;
 
@@ -56,8 +29,6 @@ export const CardHolder = styled.div `
   padding: 1rem;
   /* background: red; */
   width: 85%;
-  /* width: 85vw; */
-  /* width: 100%; */
   margin: 0 auto;
   height: 100%;
   /* background: blue; */
@@ -78,35 +49,38 @@ export const CardHolder = styled.div `
   // MOBILE
   @media only screen and (max-width: 767px) {
     flex-direction: column;
-    gap: 2rem;
-  }
-`;
-
-export const CardPair = styled.div `
-  display: flex;
-  gap: 2rem;
-  width: 50%;
-  align-items: center;
-
-  // TAB
-  @media only screen and(min-width: 768px) and(max-width: 991px) {
-  }
-
-  // MOBILE
-  @media only screen and(max-width: 767px) {
-  }
-
-  // TAB
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    /* flex-direction: column; */
-    justify-content: center;
-    gap: 2rem;
+    gap: 0;
+    /* background: red; */
     width: 100%;
-  }
-
-  // MOBILE
-  @media only screen and (max-width: 767px) {
-    flex-direction: column;
-    gap: 2rem;
+    padding: 0 0.5rem;
   }
 `;
+
+// export const CardPair = styled.div `
+//   display: flex;
+//   gap: 2rem;
+//   width: 50%;
+//   align-items: center;
+
+//   // TAB
+//   @media only screen and(min-width: 768px) and(max-width: 991px) {
+//   }
+
+//   // MOBILE
+//   @media only screen and(max-width: 767px) {
+//   }
+
+//   // TAB
+//   @media only screen and (min-width: 768px) and (max-width: 991px) {
+//     /* flex-direction: column; */
+//     justify-content: center;
+//     gap: 2rem;
+//     width: 100%;
+//   }
+
+//   // MOBILE
+//   @media only screen and (max-width: 767px) {
+//     flex-direction: column;
+//     gap: 2rem;
+//   }
+// `;

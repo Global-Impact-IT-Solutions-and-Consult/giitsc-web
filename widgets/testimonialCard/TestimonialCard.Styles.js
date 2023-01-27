@@ -14,7 +14,7 @@ export const Wrapper = styled.div `
   /* height: 15rem;
   width: 24rem; */
   height: 10rem;
-  width: 22rem;
+  width: 20rem;
   /* height: 10rem;
   width: 20rem; */
   transition: all 400ms ease-in;
@@ -31,6 +31,11 @@ export const Wrapper = styled.div `
     background: var(--theme-color);
     color: white;
     transform: translateY(-80px);
+
+    // MOBILE
+    @media only screen and (max-width: 767px) {
+      transform: translateY(0);
+    }
   }
 
   .text {

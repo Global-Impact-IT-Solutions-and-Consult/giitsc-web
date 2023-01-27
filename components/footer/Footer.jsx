@@ -24,7 +24,7 @@ const Footer = () => {
           <div className="pair">
             <div className="address">Address</div>
             <div className="bottom">
-              14, Amoo Street, By Rainoil <br /> Filling Station Agege Ogba.
+              14, Amoo Street, By Rainoil Filling Station Agege Ogba.
             </div>
           </div>
           {/* Company */}

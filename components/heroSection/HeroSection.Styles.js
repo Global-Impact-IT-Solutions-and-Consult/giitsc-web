@@ -13,6 +13,11 @@ export const Wrapper = styled.div `
   a {
     text-decoration: none;
   }
+
+  // MOBILE
+  @media only screen and (max-width: 767px) {
+    height: 80vh;
+  }
 `;
 
 export const Overlay = styled.div `
@@ -35,7 +40,7 @@ export const Overlay = styled.div `
 
   // MOBILE
   @media only screen and (max-width: 767px) {
-    height: 105%;
+    /* height: 100%; */
     margin-top: -10px;
     padding-top: 0px;
   }
@@ -64,17 +69,10 @@ export const Content = styled.div `
   // MOBILE
   @media only screen and (max-width: 767px) {
     padding-top: 2rem;
-    width: 100%;
+    width: 80%;
   }
 
   h1 {
-    /* margin-bottom: -1.3rem; */
-    /* font-size: 48px;
-    font-family: Montserrat;
-    line-height: 58.51px;
-    font-weight: 800;
-    text-align: center; */
-
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
       Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
       sans-serif;
@@ -95,6 +93,7 @@ export const Content = styled.div `
     // MOBILE
     @media only screen and (max-width: 767px) {
       font-size: 28px;
+      line-height: 49px;
       display: flex;
       flex-direction: column;
     }

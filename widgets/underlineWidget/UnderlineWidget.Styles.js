@@ -7,6 +7,13 @@ export const Wrapper = styled.div `
   flex-direction: column;
   gap: 0.5rem;
 
+  // MOBILE
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+    text-align: center;
+    /* background: red; */
+  }
+
   .text {
     font-family: "Montserrat";
     font-style: normal;
@@ -14,6 +21,12 @@ export const Wrapper = styled.div `
     font-size: 40px;
     line-height: 49px;
     color: #1a1110;
+
+    // MOBILE
+    @media only screen and (max-width: 767px) {
+      font-size: 30px;
+      line-height: 49px;
+    }
   }
 `;
 

@@ -11,6 +11,11 @@ export const Wrapper = styled.div `
     color: #fff;
     font-size: 23px;
   }
+
+  // MOBILE
+  @media only screen and (max-width: 767px) {
+    height: 40vh;
+  }
 `;
 
 export const Overlay = styled.div `
@@ -37,6 +42,8 @@ export const Overlay = styled.div `
   @media only screen and (max-width: 767px) {
     padding-top: 0px;
     padding: 0;
+    width: 95%;
+    background: red;
   }
 `;
 
@@ -83,10 +90,12 @@ export const Content = styled.div `
   @media only screen and (max-width: 767px) {
     width: 100%;
     justify-content: start;
+    /* background: red; */
     /* padding: 0 3rem; */
     /* height: 3rem; */
     gap: 2rem;
     padding: 0;
+    padding-top: 1.7rem;
     /* margin-left: 2rem; */
   }
 `;
