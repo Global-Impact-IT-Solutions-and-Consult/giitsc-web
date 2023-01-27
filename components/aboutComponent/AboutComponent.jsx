@@ -10,6 +10,7 @@ import {
   StoryBody,
 } from "./AboutComponent.Styles";
 import WhyUs from "../whyUs/WhyUs";
+import UnderlineWidget from "../../widgets/underlineWidget/UnderlineWidget";
 
 const AboutComponent = () => {
   return (
@@ -39,7 +40,8 @@ const AboutComponent = () => {
       <WhyUs title={"Our values"} />
       <BottomWrapper>
         <StoryContent>
-          <div className="heading">Our Story</div>
+          {/* <div className="heading">Our Story</div> */}
+          <UnderlineWidget text={"Our Story"} />
           <StoryBody>
             <div className="left"></div>
             <div className="right">

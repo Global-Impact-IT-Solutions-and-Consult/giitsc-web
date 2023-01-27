@@ -6,15 +6,17 @@ import { Wrapper, Top, Bottom } from "./TestimonialCard.Styles";
 // icon
 import quote from "../../public/icons/testimonials/qoute.png";
 
-const TestimonialCard = ({ image, name, review }) => {
+const TestimonialCard = ({ image, name, review, float }) => {
   return (
-    <Wrapper>
+    <Wrapper float={float}>
       <div className="icon">
-        <Image src={quote} alt="" width="45" height="45" />
+        <Image src={quote} alt="" width="45" height="30" />
       </div>
       <div className="text">{review}</div>
       <div className="bottom">
-        <Image src={image} alt="logo" width="70" height="70" />
+        <div className="imgHolder">
+          <Image src={image} alt="logo" width="70" height="70" />
+        </div>
         <div className="bottomPair">
           <div className="name">{name}</div>
           <div className="title">{name}</div>

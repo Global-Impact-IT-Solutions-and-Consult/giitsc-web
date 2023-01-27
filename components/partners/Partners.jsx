@@ -28,7 +28,7 @@ const Partners = () => {
           <Image src={cisco} alt="cisco" width="69" height="41" />
           <Image src={oracle} alt="oracle" width="155" height="36" />
           <Image src={ibm} alt="ibm" width="79" height="29" />
-          <Image src={huawei} alt="huawei" width="50" height="32" />
+          <Image src={huawei} alt="huawei" width="60" height="32" />
           <Image src={hp} alt="hp" width="39" height="39" />
           <Image src={ms} alt="microsoft" width="101" height="38" />
           <Image src={dell} alt="dell" width="36" height="36" />

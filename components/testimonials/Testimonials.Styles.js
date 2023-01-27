@@ -76,15 +76,17 @@ export const Content = styled.div `
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  /* height: 90%; */
-  width: 90%;
+  /* height: 100%; */
+  width: 85%;
   padding: 2rem;
   /* background: yellow; */
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
-  gap: 1rem;
+  /* justify-content: center; */
+  /* flex-wrap: wrap; */
+  gap: 9rem;
   margin: 1rem;
+  position: relative;
 
   // small PC
   @media only screen and (min-width: 992px) and (max-width: 1199px) {

@@ -11,11 +11,13 @@ import project from "../../public/services/pngs/development.png";
 import training from "../../public/services/pngs/education.png";
 import web from "../../public/services/pngs/coding.png";
 import marketing from "../../public/services/pngs/bullhorn.png";
+import UnderlineWidget from "../../widgets/underlineWidget/UnderlineWidget";
 
 const Services = () => {
   return (
     <Wrapper>
-      <div className="heading">Services</div>
+      {/* <div className="heading">Services</div> */}
+      <UnderlineWidget text={"Services"} />
       <CardHolder>
         <ServiceCard
           icon={mobile}

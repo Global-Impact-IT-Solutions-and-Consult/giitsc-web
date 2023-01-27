@@ -6,25 +6,39 @@ export const Wrapper = styled.div `
   justify-content: center;
   flex-direction: column;
   gap: 0.5rem;
+
+  .text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 49px;
+    color: #1a1110;
+  }
 `;
 
 export const Lines = styled.div `
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.3rem;
+  /* margin-top: -0.3rem; */
 
   .line1 {
     background-color: var(--theme-color);
-    width: 3rem;
-    height: 2rem;
+    width: 54px;
+    height: 6px;
     margin: 0 auto;
+    background: #011729;
+    border-radius: 25.1417px;
   }
 
   .line2 {
     background-color: var(--theme-color);
-    width: 1.5rem;
-    height: 2rem;
+    width: 19px;
+    height: 6px;
     margin: 0 auto;
+    background: #011729;
+    border-radius: 25.1417px;
   }
 `;

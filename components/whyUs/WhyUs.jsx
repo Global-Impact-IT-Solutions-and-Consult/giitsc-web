@@ -9,12 +9,14 @@ import clock from "../../public/icons/whyUs/clock.png";
 import rate from "../../public/icons/whyUs/rate.png";
 import risk from "../../public/icons/whyUs/risk.png";
 import work from "../../public/icons/whyUs/work.png";
+import UnderlineWidget from "../../widgets/underlineWidget/UnderlineWidget";
 
 const WhyUs = ({ title }) => {
   return (
     <Wrapper>
       {/* <Overlay> */}
-      <div className="heading">{title}</div>
+      {/* <div className="heading">{title}</div> */}
+      <UnderlineWidget text={title} />
       <Content>
         <ValueCard icon={work} text={"Fast-paced, dynamic work environment"} />
         <ValueCard icon={rate} text={"Positive impact on the world"} />

@@ -16,8 +16,8 @@ import UnderlineWidget from "../../widgets/underlineWidget/UnderlineWidget";
 const Operations = () => {
   return (
     <Wrapper>
-      <div className="heading">How we operate</div>
-      {/* <UnderlineWidget /> */}
+      {/* <div className="heading">How we operate</div> */}
+      <UnderlineWidget text={"How we operate"} />
       <CardHolder>
         <OperationCard
           icon={packagee}

@@ -11,19 +11,26 @@ export const Wrapper = styled.div `
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  height: 15rem;
-  width: 24rem;
-  transition: all 300ms ease-in;
+  /* height: 15rem;
+  width: 24rem; */
+  height: 10rem;
+  width: 22rem;
+  /* height: 10rem;
+  width: 20rem; */
+  transition: all 400ms ease-in;
   margin: 2rem 0;
   position: relative;
   background: #ffffff;
+  /* background: ${(props) => (props.float ? "red" : "#fff")}; */
+  z-index: ${(props) => (props.float ? 1 : 0)};
+  position: ${(props) => props.float && "absolute"};
   box-shadow: 0px 6.28542px 30.5292px 0.897917px rgba(0, 0, 0, 0.09);
   border-radius: 5.3875px;
 
   &:hover {
     background: var(--theme-color);
     color: white;
-    transform: translateY(-40px);
+    transform: translateY(-80px);
   }
 
   .text {
@@ -39,11 +46,11 @@ export const Wrapper = styled.div `
     width: 50%;
     padding: 0 1rem;
     position: absolute;
-    margin-bottom: -18rem;
+    margin-bottom: -14rem;
     height: 50%;
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    /* gap: 0.6rem; */
     justify-content: space-between;
     align-items: center;
     /* margin-bottom: -75px; */

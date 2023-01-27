@@ -7,13 +7,15 @@ import { Content, Overlay, Wrapper } from "./Testimonials.Styles";
 import ayo from "../../public/testimonials/ayo.jpg";
 import may from "../../public/testimonials/may.jpg";
 import vince from "../../public/testimonials/vince.jpg";
+import UnderlineWidget from "../../widgets/underlineWidget/UnderlineWidget";
 
 const Testimonials = () => {
   return (
     <>
       <Wrapper>
         <Overlay>
-          <div className="heading">What our clients are saying</div>
+          {/* <div className="heading">What our clients are saying</div> */}
+          <UnderlineWidget text={"What our clients are saying"} />
           <Content>
             <TestimonialCard
               image={ayo}
@@ -28,6 +30,7 @@ const Testimonials = () => {
               review={
                 "Nemo id, vitae magni dolore, cum accusamus fugiat quas beatae, dolores omnis mollitia repellendus eius."
               }
+              float={true}
             />
             <TestimonialCard
               image={vince}

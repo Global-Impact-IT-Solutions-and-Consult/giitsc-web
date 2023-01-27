@@ -17,10 +17,10 @@ export const Wrapper = styled.div `
     height: 86px;
     padding: 1em 5rem;
     position: fixed;
-    perspective: 1000px;
-    z-index: 1;
+    /* perspective: 1000px; */
+    z-index: 10;
     /* width: 90vw; */
-    width: 99%;
+    width: 100%;
     margin: 0 auto;
     min-height: 60px;
     /* background-color: rgba(0, 0, 0, 0.75); */
@@ -259,6 +259,7 @@ export const Wrapper = styled.div `
       font-weight: 700;
       font-size: 10px;
       line-height: 12px;
+      cursor: crosshair;
     }
 
     &:hover {

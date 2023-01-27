@@ -56,6 +56,16 @@ export const Left = styled.div `
     border: none;
     margin: 1rem 0;
     background: rgba(255, 255, 255, 0.23);
+
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10.9109px;
+    line-height: 13px;
+    /* text-align: center; */
+    letter-spacing: 0.48em;
+    color: #ffffff;
+    padding-left: 1.5rem;
   }
 
   button {
@@ -68,8 +78,8 @@ export const Left = styled.div `
 
     font-family: "Montserrat";
     font-style: normal;
-    font-weight: 600;
-    font-size: 20.1432px;
+    font-weight: 700;
+    font-size: 18px;
     line-height: 25px;
     text-align: center;
     color: #011729;
