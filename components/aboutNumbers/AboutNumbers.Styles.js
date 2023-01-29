@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div `
   background: white;
   /* width: 100vw; */
-  /* height: 90vh; */
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,6 +17,12 @@ export const Wrapper = styled.div `
   justify-content: center;
   align-items: center;
   padding: 2rem 0;
+
+  // MOBILE
+  @media only screen and (max-width: 767px) {
+    /* background: red; */
+    height: 100%;
+  }
 `;
 
 export const Content = styled.div `

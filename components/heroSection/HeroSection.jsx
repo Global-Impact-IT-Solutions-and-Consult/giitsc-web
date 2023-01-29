@@ -5,16 +5,20 @@ import { Wrapper, Overlay, Content } from "./HeroSection.Styles";
 
 // Components and widgets
 import { Button } from "../../widgets/buttonWidget/ButtonWidget.Styles";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const HeroSection = () => {
+  const { scrollYProgress } = useScroll();
+  const scale = useTransform(scrollYProgress, [0, 500], [1, 0]);
+
   return (
     <Wrapper>
       <Overlay>
         <Content>
-          <h1 className="my-3">
+          <motion.h1 className="my-3" style={{ opacity: scale }}>
             {/* Welcome to <span>Global Impact!</span> */}
             Technology solutions for a smarter future
-          </h1>
+          </motion.h1>
           {/* <h4>We are experts in digital marketing and SEO</h4> */}
           {/* <p>Feel free to check out our services</p> */}
           {/* <div className="pair">

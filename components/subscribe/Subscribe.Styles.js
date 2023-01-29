@@ -42,6 +42,7 @@ export const Left = styled.div `
   @media only screen and (max-width: 767px) {
     width: 90%;
     margin: 0 auto;
+    gap: 1rem;
   }
 
   .text {
@@ -77,6 +78,14 @@ export const Left = styled.div `
     letter-spacing: 0.48em;
     color: #ffffff;
     padding-left: 1.5rem;
+
+    // MOBILE
+    @media only screen and (max-width: 767px) {
+      font-size: 10px;
+      line-height: 9px;
+      /* padding: 0.5rem; */
+      text-align: left;
+    }
   }
 
   button {
@@ -95,6 +104,14 @@ export const Left = styled.div `
     text-align: center;
     color: #011729;
     transition: all 300ms linear;
+
+    // MOBILE
+    @media only screen and (max-width: 767px) {
+      font-size: 13px;
+      line-height: 20px;
+      padding: 0.5rem;
+      text-align: left;
+    }
 
     &:hover {
       background: skyblue;

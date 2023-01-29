@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import MyFunction from "./nav";
 
 const NavbarRedo = () => {
+  const myRef = useRef();
+
+  // const MyFunction = () => {
+  //   if (myRef.className === "topnav") {
+  //     myRef.className += " responsive";
+  //   } else {
+  //     myRef.className = "topnav";
+  //   }
+  // };
+
   return (
     <>
       <Head>
@@ -14,7 +24,7 @@ const NavbarRedo = () => {
       </Head>
 
       <body>
-        <div className="topnav" id="myTopnav">
+        <div className="topnav" ref={myRef} id="myTopnav">
           <a href="#home" className="active">
             Home
           </a>
@@ -36,13 +46,13 @@ const NavbarRedo = () => {
             href="javascript:void(0);"
             style="font-size:15px;"
             className="icon"
-            onclick="myFunction()"
+            onclick={MyFunction()}
           >
             &#9776;
           </a>
         </div>
 
-        <MyFunction />
+        {/* <MyFunction /> */}
       </body>
     </>
   );

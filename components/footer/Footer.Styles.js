@@ -275,4 +275,9 @@ export const Bottom = styled.div `
   font-size: 15px;
   line-height: 18px;
   color: #ffffff;
+
+  // MOBILE
+  @media only screen and (max-width: 767px) {
+    justify-content: center;
+  }
 `;
