@@ -50,7 +50,8 @@ export const Input = styled.input `
 
   //MOBILE
   @media only screen and (max-width: 767px) {
-    width: 95%;
+    /* width: 95%; */
+    width: 950px;
     /* padding: 2rem 0.5rem; */
     justify-content: center;
   }
@@ -66,4 +67,9 @@ export const Label = styled.label `
   font-size: 15px;
   line-height: 18px;
   color: #011729;
+
+  // MOBILE
+  @media only screen and (max-width: 767px) {
+    text-align: center;
+  }
 `;

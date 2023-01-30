@@ -67,8 +67,9 @@ export const LeftContent = styled.div `
 
     // MOBILE
     @media only screen and (max-width: 767px) {
-      font-size: 45px;
-      line-height: 44px;
+      font-size: 35px;
+      line-height: 34px;
+      text-align: center;
       /* background-color: yellow; */
     }
   }

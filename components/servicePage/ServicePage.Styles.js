@@ -11,6 +11,43 @@ export const Wrapper = styled.div `
   padding-top: 150px;
   padding-bottom: 2rem;
 
+  a {
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+
+    width: 117px;
+    height: 32px;
+    left: 87px;
+    top: 822px;
+
+    border: 0.5px solid #011729;
+    border-radius: 5px;
+
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 134.4%;
+    /* or 20px */
+
+    color: #000000;
+    text-decoration: none;
+    transition: all 300ms linear;
+
+    &:hover {
+      background: var(--theme-color);
+      color: #fff;
+    }
+  }
+
   // MOBILE
   @media only screen and (max-width: 767px) {
     width: 100%;
@@ -56,6 +93,7 @@ export const Main = styled.div `
   justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
+  margin-bottom: 3rem;
 
   // MOBILE
   @media only screen and (max-width: 767px) {
@@ -64,7 +102,7 @@ export const Main = styled.div `
     /* background-color: yellow; */
     flex-direction: column;
     padding: 1rem;
-    gap: 5rem;
+    gap: 2rem;
   }
 `;
 
@@ -120,60 +158,25 @@ export const Left = styled.div `
       text-align: center;
     }
   }
-
-  a {
-    box-sizing: border-box;
-
-    /* Auto layout */
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-    gap: 10px;
-
-    width: 117px;
-    height: 32px;
-    left: 87px;
-    top: 822px;
-
-    border: 0.5px solid #011729;
-    border-radius: 5px;
-
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 134.4%;
-    /* or 20px */
-
-    color: #000000;
-    text-decoration: none;
-    transition: all 300ms linear;
-
-    &:hover {
-      background: var(--theme-color);
-      color: #fff;
-    }
-  }
 `;
 
 export const Right = styled.div `
   /* background: green; */
   width: 100%;
-  height: 34rem;
+  /* height: 34rem; */
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  justify-content: space-between;
-  margin-top: -1.7rem;
+  gap: 2rem;
+  justify-content: space-evenly;
+  /* margin-top: -1.7rem; */
 
   // MOBILE
   @media only screen and (max-width: 767px) {
     /* background: red; */
     text-align: center;
     height: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
   .top {
