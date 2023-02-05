@@ -9,13 +9,21 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const HeroSection = () => {
   const { scrollYProgress } = useScroll();
-  const scale = useTransform(scrollYProgress, [0, 500], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 100], [1, 0]);
 
   return (
     <Wrapper>
       <Overlay>
         <Content>
-          <motion.h1 className="my-3" style={{ opacity: scale }}>
+          <motion.h1
+            className="my-3"
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{
+              opacity: [0.5, 1, 0.5, 1],
+              scale: [1, 2, 1.2],
+            }}
+            transition={{ duration: 5 }}
+          >
             {/* Welcome to <span>Global Impact!</span> */}
             Technology solutions for a smarter future
           </motion.h1>

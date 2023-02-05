@@ -11,6 +11,7 @@ import {
   DropdownMobile,
   ExtendedWrapper,
   Hamburger,
+  HamburgerMobile,
   InnerWrapper,
   Left,
   LinkHolder,
@@ -18,23 +19,30 @@ import {
   NavbarLInk,
   NavbarLInkMobile,
   Right,
+  RightInner,
   Wrapper,
 } from "./MyNav.Styles";
 
 // icons
-
 import logo from "../../public/icons/nav/logo.png";
 import menu from "../../public/icons/nav/hamburger.png";
-import { motion, useTransform, useScroll } from "framer-motion";
+import { motion, transform, useTransform, useScroll } from "framer-motion";
 
 const MyNavbar = () => {
   const [extendNav, setExtendNav] = useState(false);
   const [dropdown, setDropdown] = useState(false);
   const [dropdownMobile, setDropdownMobile] = useState(false);
+  const [slideAnimate, setSlideAnimate] = useState(false);
 
   const onMobileMenuClick = () => {
     setExtendNav(!extendNav);
     setDropdownMobile(!dropdownMobile);
+  };
+
+  const spring = {
+    type: "spring",
+    damping: 10,
+    stiffness: 100,
   };
 
   return (
@@ -56,66 +64,79 @@ const MyNavbar = () => {
           </Link>
         </Left>
         <Right>
-          <LinkHolder>
-            <NavbarLInk href="/">Home</NavbarLInk>
-            <Dropdown dropdown={dropdown}>
-              <div
-                className="dropdownbtn"
-                onClick={() => setDropdown(!dropdown)}
-              >
-                <span>Services</span>
-                <i class="fa fa-caret-down"></i>
-              </div>
-              <div className="dropdownMenu">
-                <DropdownLInk
+          <RightInner>
+            <LinkHolder
+              initial={{ opacity: 0, x: 1000 }}
+              animate={{ opacity: 1, x: slideAnimate ? 0 : 1000 }}
+              transition={{ duration: 1 }}
+            >
+              <NavbarLInk href="/">Home</NavbarLInk>
+              <Dropdown dropdown={dropdown}>
+                <div
+                  className="dropdownbtn"
                   onClick={() => setDropdown(!dropdown)}
-                  href="/mobile"
                 >
-                  Mobile Development
-                </DropdownLInk>
-                <DropdownLInk
-                  onClick={() => setDropdown(!dropdown)}
-                  href="/networking"
-                >
-                  Networking
-                </DropdownLInk>
-                <DropdownLInk
-                  onClick={() => setDropdown(!dropdown)}
-                  href="/management"
-                >
-                  Project Management
-                </DropdownLInk>
-                <DropdownLInk
-                  onClick={() => setDropdown(!dropdown)}
-                  href="/training"
-                >
-                  Training
-                </DropdownLInk>
-                <DropdownLInk
-                  onClick={() => setDropdown(!dropdown)}
-                  href="/web"
-                >
-                  Web Development
-                </DropdownLInk>
-                <DropdownLInk
-                  onClick={() => setDropdown(!dropdown)}
-                  href="/marketing"
-                >
-                  Digital Marketing
-                </DropdownLInk>
-              </div>
-            </Dropdown>
-            <NavbarLInk href="/about">About us</NavbarLInk>
-            <NavbarLInk href="/contact">Contact</NavbarLInk>
+                  <span>Services</span>
+                  <i class="fa fa-caret-down"></i>
+                </div>
+                <div className="dropdownMenu">
+                  <DropdownLInk
+                    onClick={() => setDropdown(!dropdown)}
+                    href="/mobile"
+                  >
+                    Mobile Development
+                  </DropdownLInk>
+                  <DropdownLInk
+                    onClick={() => setDropdown(!dropdown)}
+                    href="/networking"
+                  >
+                    Networking
+                  </DropdownLInk>
+                  <DropdownLInk
+                    onClick={() => setDropdown(!dropdown)}
+                    href="/management"
+                  >
+                    Project Management
+                  </DropdownLInk>
+                  <DropdownLInk
+                    onClick={() => setDropdown(!dropdown)}
+                    href="/training"
+                  >
+                    Training
+                  </DropdownLInk>
+                  <DropdownLInk
+                    onClick={() => setDropdown(!dropdown)}
+                    href="/web"
+                  >
+                    Web Development
+                  </DropdownLInk>
+                  <DropdownLInk
+                    onClick={() => setDropdown(!dropdown)}
+                    href="/marketing"
+                  >
+                    Digital Marketing
+                  </DropdownLInk>
+                </div>
+              </Dropdown>
+              <NavbarLInk href="/about">About us</NavbarLInk>
+              <NavbarLInk href="/contact">Contact</NavbarLInk>
 
-            <Hamburger onClick={() => setExtendNav(!extendNav)}>
-              {extendNav ? (
+              <HamburgerMobile onClick={() => setExtendNav(!extendNav)}>
+                {extendNav ? (
+                  <>&#10005;</>
+                ) : (
+                  <Image src={menu} alt="logo" width="25" height="32" />
+                )}
+              </HamburgerMobile>
+            </LinkHolder>
+            <Hamburger onClick={() => setSlideAnimate(!slideAnimate)}>
+              {slideAnimate ? (
                 <>&#10005;</>
               ) : (
                 <Image src={menu} alt="logo" width="25" height="32" />
               )}
             </Hamburger>
-          </LinkHolder>
+          </RightInner>
         </Right>
       </InnerWrapper>
 

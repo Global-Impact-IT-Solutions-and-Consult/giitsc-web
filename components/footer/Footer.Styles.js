@@ -4,7 +4,7 @@ export const Wrapper = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #10121a;
+  background: var(--theme-color);
   padding: 2rem;
 
   a {
@@ -43,7 +43,7 @@ export const Overlay = styled.div `
 
 export const Content = styled.div `
   /* background-color: blue; */
-  width: 70%;
+  width: 84%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

@@ -2,7 +2,7 @@ import Link from "next/link";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const Wrapper = styled.nav `
+export const Wrapper = styled.nav`
   width: 100%;
   height: ${(props) => (props.extendNav ? "100vh" : "86px")};
   background: var(--theme-color);
@@ -18,17 +18,24 @@ export const Wrapper = styled.nav `
   }
 `;
 
-export const Left = styled.div `
+export const InnerWrapper = styled.div`
+  width: 100%;
+  height: 86px;
+  display: flex;
+  align-items: center;
+`;
+
+export const Left = styled.div`
   flex: 30%;
   /* background: green; */
   padding-left: 50px;
   align-items: center;
-  padding-top: 20px;
+  /* padding-top: 20px; */
 `;
 
-export const Right = styled.div `
+export const Right = styled(motion.div)`
   display: flex;
-  gap: 3rem;
+  /* gap: 3rem; */
   align-items: center;
   justify-content: end;
   flex: 70%;
@@ -36,19 +43,25 @@ export const Right = styled.div `
   padding-right: 5%;
 `;
 
-export const InnerWrapper = styled.div `
-  width: 100%;
-  height: 86px;
+export const RightInner = styled(motion.div)`
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background: red; */
+  padding-right: -2rem;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
-export const LinkHolder = styled.div `
+export const LinkHolder = styled(motion.div)`
   display: flex;
   /* background: red; */
 `;
 
-export const NavbarLInk = styled(Link)
-`
+export const NavbarLInk = styled(Link)`
   text-decoration: none;
   position: relative;
   text-align: center;
@@ -64,7 +77,8 @@ export const NavbarLInk = styled(Link)
   transition: all 400ms ease-in;
 
   &:hover {
-    border-bottom: 1px solid white;
+    /* border-bottom: 1px solid white; */
+    color: #ffffff;
   }
 
   // Media query
@@ -73,35 +87,15 @@ export const NavbarLInk = styled(Link)
   }
 `;
 
-export const NavbarLInkMobile = styled(Link)
-`
-  text-decoration: none;
-  position: relative;
-  text-align: center;
-  color: #ffffff;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 16px;
-  padding-bottom: 0.3rem;
-  margin: 10px;
-  transition: all 300ms ease-in;
-
-  &:hover {
-    border-bottom: 1px solid white;
-  }
-`;
-
-export const Hamburger = styled.button `
-  width: 70px;
+export const Hamburger = styled.button`
+  width: 40px;
   height: 50px;
   background: none;
   border: none;
   color: white;
   font-size: 45px;
   cursor: pointer;
-  /* background: red; */
+  /* background: yellow; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,30 +104,12 @@ export const Hamburger = styled.button `
   font-weight: 600;
 
   // Media query
-  @media (min-width: 700px) {
+  @media (max-width: 700px) {
     display: none;
   }
 `;
 
-export const ExtendedWrapper = styled.div `
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: linear-gradient(
-      0deg,
-      rgba(1, 23, 41, 0.62),
-      rgba(1, 23, 41, 0.62)
-    ),
-    linear-gradient(0deg, rgba(1, 23, 41, 0.62), rgba(1, 23, 41, 0.62)),
-    rgba(1, 23, 41, 0.62);
-
-  // Media query
-  @media (min-width: 700px) {
-    display: none;
-  }
-`;
-
-export const Dropdown = styled.div `
+export const Dropdown = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
@@ -185,8 +161,7 @@ export const Dropdown = styled.div `
   }
 `;
 
-export const DropdownLInk = styled(Link)
-`
+export const DropdownLInk = styled(Link)`
   text-decoration: none;
   position: relative;
   text-align: left;
@@ -208,7 +183,47 @@ export const DropdownLInk = styled(Link)
 `;
 
 // Mobile menu dropdown
-export const DropdownMobile = styled.div `
+export const ExtendedWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+      0deg,
+      rgba(1, 23, 41, 0.62),
+      rgba(1, 23, 41, 0.62)
+    ),
+    linear-gradient(0deg, rgba(1, 23, 41, 0.62), rgba(1, 23, 41, 0.62)),
+    rgba(1, 23, 41, 0.62);
+
+  // Media query
+  @media (min-width: 700px) {
+    display: none;
+  }
+`;
+
+export const HamburgerMobile = styled.button`
+  width: 70px;
+  height: 50px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 45px;
+  cursor: pointer;
+  /* background: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -5px;
+  font-size: 18px;
+  font-weight: 600;
+
+  // Media query
+  @media (min-width: 700px) {
+    display: none;
+  }
+`;
+
+export const DropdownMobile = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -259,8 +274,7 @@ export const DropdownMobile = styled.div `
   }
 `;
 
-export const DropdownLInkMobile = styled(Link)
-`
+export const DropdownLInkMobile = styled(Link)`
   text-decoration: none;
   position: relative;
   text-align: center;
@@ -282,5 +296,24 @@ export const DropdownLInkMobile = styled(Link)
   // Media query //hide in big screen
   @media (min-width: 700px) {
     display: none;
+  }
+`;
+
+export const NavbarLInkMobile = styled(Link)`
+  text-decoration: none;
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  padding-bottom: 0.3rem;
+  margin: 10px;
+  transition: all 300ms ease-in;
+
+  &:hover {
+    border-bottom: 1px solid white;
   }
 `;

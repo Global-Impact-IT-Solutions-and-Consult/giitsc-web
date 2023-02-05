@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div `
+export const Wrapper = styled.div`
   background: #fff;
   height: 50vh;
   display: flex;
@@ -12,13 +12,26 @@ export const Wrapper = styled.div `
     font-size: 23px;
   }
 
+  .title {
+    display: none;
+  }
+
   // MOBILE
   @media only screen and (max-width: 767px) {
-    height: 40vh;
+    height: 100%;
+    flex-direction: column;
+    background: var(--bg-light-blue);
+    padding: 2rem 0;
+    /* gap: 2rem; */
+    /* background: red; */
+
+    .title {
+      display: inline-block;
+    }
   }
 `;
 
-export const Overlay = styled.div `
+export const Overlay = styled.div`
   /* background-color: rgba(122, 122, 122, 0.3); */
   height: 100%;
   width: 100%;
@@ -47,7 +60,7 @@ export const Overlay = styled.div `
   }
 `;
 
-export const Content = styled.div `
+export const Content = styled.div`
   /* background: url("/images/ero.jpg"); */
   background: url("/icons/partners/partners.png");
   /* background-color: blue; */
@@ -89,13 +102,14 @@ export const Content = styled.div `
   // MOBILE
   @media only screen and (max-width: 767px) {
     width: 100%;
-    justify-content: start;
-    /* background: red; */
-    /* padding: 0 3rem; */
-    /* height: 3rem; */
+    /* justify-content: start; */
+    flex-direction: column;
     gap: 2rem;
     padding: 0;
     padding-top: 1.7rem;
-    /* margin-left: 2rem; */
+    margin-top: 1.7rem;
+    background: inherit;
+    /* background: red; */
+    height: 45rem;
   }
 `;

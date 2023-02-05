@@ -3,11 +3,10 @@ import Image from "next/image";
 // styles
 import { Content, Overlay, Wrapper } from "./Partners.Styles";
 
+// Components
+import UnderlineWidget from "../../widgets/underlineWidget/UnderlineWidget";
+
 // images
-// import dell from "../../public/partners/dell-white.png";
-// import ibm from "../../public/partners/ibm-white.png";
-// import ms from "../../public/partners/ms-white.png";
-// import vmware from "../../public/partners/vmware-white.png";
 import oracle from "../../public/icons/partners/oracle.png";
 import ms from "../../public/icons/partners/ms.png";
 import huawei from "../../public/icons/partners/huawei.png";
@@ -21,8 +20,9 @@ const Partners = () => {
   return (
     <>
       <Wrapper>
-        {/* <Overlay> */}
-        {/* <h4 className="my-3">Our Partners</h4> */}
+        <div className="title">
+          <UnderlineWidget text={"Partners"} />
+        </div>
         <Content>
           <Image src={vm} alt="vmware" width="143" height="36" />
           <Image src={cisco} alt="cisco" width="69" height="41" />
@@ -33,7 +33,6 @@ const Partners = () => {
           <Image src={ms} alt="microsoft" width="101" height="38" />
           <Image src={dell} alt="dell" width="36" height="36" />
         </Content>
-        {/* </Overlay> */}
       </Wrapper>
     </>
   );
