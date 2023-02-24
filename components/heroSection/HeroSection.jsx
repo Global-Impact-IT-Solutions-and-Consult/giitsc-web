@@ -21,6 +21,7 @@ const HeroSection = () => {
             animate={{
               opacity: [0.5, 1, 0.5, 1],
               scale: [1, 2, 1.2],
+              color: ["#fff", "#98eff9", "#74e6f7", "#fff"],
             }}
             transition={{ duration: 5 }}
           >

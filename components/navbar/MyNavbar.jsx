@@ -48,7 +48,7 @@ const MyNavbar = () => {
   return (
     <Wrapper extendNav={extendNav}>
       <Head>
-        <title>Global Impact I.T Solutions</title>
+        <title>Global Impact I.T Solutions & Consult</title>
         <meta name="description" content="Global Impact " />
         <link rel="icon" href="/logo.png" />
         <link
@@ -121,13 +121,13 @@ const MyNavbar = () => {
               <NavbarLInk href="/about">About us</NavbarLInk>
               <NavbarLInk href="/contact">Contact</NavbarLInk>
 
-              <HamburgerMobile onClick={() => setExtendNav(!extendNav)}>
+              {/* <HamburgerMobile onClick={() => setExtendNav(!extendNav)}>
                 {extendNav ? (
                   <>&#10005;</>
                 ) : (
                   <Image src={menu} alt="logo" width="25" height="32" />
                 )}
-              </HamburgerMobile>
+              </HamburgerMobile> */}
             </LinkHolder>
             <Hamburger onClick={() => setSlideAnimate(!slideAnimate)}>
               {slideAnimate ? (
@@ -136,6 +136,13 @@ const MyNavbar = () => {
                 <Image src={menu} alt="logo" width="25" height="32" />
               )}
             </Hamburger>
+            <HamburgerMobile onClick={() => setExtendNav(!extendNav)}>
+              {extendNav ? (
+                <>&#10005;</>
+              ) : (
+                <Image src={menu} alt="logo" width="25" height="32" />
+              )}
+            </HamburgerMobile>
           </RightInner>
         </Right>
       </InnerWrapper>

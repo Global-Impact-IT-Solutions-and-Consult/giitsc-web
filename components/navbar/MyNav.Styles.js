@@ -49,11 +49,11 @@ export const RightInner = styled(motion.div)`
   justify-content: space-between;
   /* background: red; */
   padding-right: -2rem;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 
-  &::-webkit-scrollbar {
+  /* &::-webkit-scrollbar {
     display: none;
-  }
+  } */
 `;
 
 export const LinkHolder = styled(motion.div)`
