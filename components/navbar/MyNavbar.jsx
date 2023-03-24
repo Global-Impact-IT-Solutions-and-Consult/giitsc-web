@@ -63,73 +63,60 @@ const MyNavbar = () => {
           </Link>
         </Left>
         <Right>
-          <RightInner>
-            <LinkHolder
-              initial={{ opacity: 0, x: 450 }}
-              animate={{
-                opacity: slideAnimate ? 1 : 0,
-                x: slideAnimate ? 0 : 450,
-              }}
-              transition={{ duration: 1 }}
-            >
-              <NavbarLInk href="/">Home</NavbarLInk>
-              <Dropdown dropdown={dropdown}>
-                <div
-                  className="dropdownbtn"
+          <LinkHolder>
+            <NavbarLInk href="/">Home</NavbarLInk>
+            <Dropdown dropdown={dropdown}>
+              <div
+                className="dropdownbtn"
+                onClick={() => setDropdown(!dropdown)}
+              >
+                <span>Services</span>
+                <i className="fa fa-caret-down"></i>
+              </div>
+              <div className="dropdownMenu">
+                <DropdownLInk
                   onClick={() => setDropdown(!dropdown)}
+                  href="/mobile"
                 >
-                  <span>Services</span>
-                  <i class="fa fa-caret-down"></i>
-                </div>
-                <div className="dropdownMenu">
-                  <DropdownLInk
-                    onClick={() => setDropdown(false)}
-                    href="/mobile"
-                  >
-                    Mobile Development
-                  </DropdownLInk>
-                  <DropdownLInk
-                    onClick={() => setDropdown(false)}
-                    href="/networking"
-                  >
-                    Networking
-                  </DropdownLInk>
-                  <DropdownLInk
-                    onClick={() => setDropdown(false)}
-                    href="/management"
-                  >
-                    Project Management
-                  </DropdownLInk>
-                  <DropdownLInk
-                    onClick={() => setDropdown(false)}
-                    href="/training"
-                  >
-                    Training
-                  </DropdownLInk>
-                  <DropdownLInk onClick={() => setDropdown(false)} href="/web">
-                    Web Development
-                  </DropdownLInk>
-                  <DropdownLInk
-                    onClick={() => setDropdown(false)}
-                    href="/marketing"
-                  >
-                    Digital Marketing
-                  </DropdownLInk>
-                </div>
-              </Dropdown>
-              <NavbarLInk href="/about">About us</NavbarLInk>
-              <NavbarLInk href="/contact">Contact</NavbarLInk>
+                  Mobile Development
+                </DropdownLInk>
+                <DropdownLInk
+                  onClick={() => setDropdown(!dropdown)}
+                  href="/networking"
+                >
+                  Networking
+                </DropdownLInk>
+                <DropdownLInk
+                  onClick={() => setDropdown(!dropdown)}
+                  href="/management"
+                >
+                  Project Management
+                </DropdownLInk>
+                <DropdownLInk
+                  onClick={() => setDropdown(!dropdown)}
+                  href="/training"
+                >
+                  Training
+                </DropdownLInk>
+                <DropdownLInk
+                  onClick={() => setDropdown(!dropdown)}
+                  href="/web"
+                >
+                  Web Development
+                </DropdownLInk>
+                <DropdownLInk
+                  onClick={() => setDropdown(!dropdown)}
+                  href="/marketing"
+                >
+                  Digital Marketing
+                </DropdownLInk>
+              </div>
+            </Dropdown>
+            <NavbarLInk href="/about">About us</NavbarLInk>
+            <NavbarLInk href="/contact">Contact</NavbarLInk>
 
-              {/* <HamburgerMobile onClick={() => setExtendNav(!extendNav)}>
-                {extendNav ? (
-                  <>&#10005;</>
-                ) : (
-                  <Image src={menu} alt="logo" width="25" height="32" />
-                )}
-              </HamburgerMobile> */}
-            </LinkHolder>
-            <Hamburger onClick={onWebMenuClick}>
-              {slideAnimate ? (
+            <Hamburger onClick={() => setExtendNav(!extendNav)}>
+              {extendNav ? (
                 <>&#10005;</>
               ) : (
                 <Image src={menu} alt="logo" width="25" height="32" />
@@ -142,7 +129,7 @@ const MyNavbar = () => {
                 <Image src={menu} alt="logo" width="25" height="32" />
               )}
             </HamburgerMobile>
-          </RightInner>
+          </LinkHolder>
         </Right>
       </InnerWrapper>
 
@@ -159,7 +146,7 @@ const MyNavbar = () => {
                 onClick={() => setDropdownMobile(!dropdownMobile)}
               >
                 <span>Services</span>
-                <i class="fa fa-caret-down"></i>
+                <i className="fa fa-caret-down"></i>
               </div>
               <div className="dropdownMenuMobile">
                 <DropdownLInkMobile onClick={onMobileMenuClick} href="/mobile">
