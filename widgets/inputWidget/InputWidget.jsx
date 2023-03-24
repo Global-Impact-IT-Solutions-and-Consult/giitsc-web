@@ -26,7 +26,7 @@ const InputWidget = ({
           width={width}
           height={height}
           defaultValue={defaultValue}
-          onChange={(e) => onChange(e)}
+          // onChange={(e) => onChange(e)}
           required={required ? required : ""}
         />
       </Wrapper>

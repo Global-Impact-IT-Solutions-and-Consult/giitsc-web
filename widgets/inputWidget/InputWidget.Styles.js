@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div `
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -14,15 +14,17 @@ export const Wrapper = styled.div `
   }
 `;
 
-export const Input = styled.input `
+export const Input = styled.input`
   padding: 0.5em 1rem;
   height: ${(props) => props.height || "50px"};
   width: ${(props) => props.width || "400px"};
   font-family: "Inter";
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   background: #ffffff;
+  /* color: #c3c3c3; */
   /* background: #c3c3c3; */
   /* background: red; */
   border: 1px solid rgba(1, 23, 41, 0.48);
@@ -57,7 +59,7 @@ export const Input = styled.input `
   }
 `;
 
-export const Label = styled.label `
+export const Label = styled.label`
   width: 119px;
   height: 20px;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,

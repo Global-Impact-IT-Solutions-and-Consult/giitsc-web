@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.a`
+export const Wrapper = styled.a `
   background: #fff;
   color: var(--theme-color);
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
@@ -10,7 +10,7 @@ export const Wrapper = styled.a`
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
-  /* margin: 1.5rem 0; */
+  margin: 0 0.3rem;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.11);
   border-radius: 7px;
@@ -23,6 +23,12 @@ export const Wrapper = styled.a`
   &:hover {
     background: var(--theme-color);
     color: #fff;
+    transform: translateY(-35px);
+
+    // MOBILE
+    @media only screen and (max-width: 767px) {
+      transform: translateY(0);
+    }
 
     .bottom {
       border-top: 2px solid #fff;
@@ -45,7 +51,7 @@ export const Wrapper = styled.a`
   }
 `;
 
-export const Top = styled.div`
+export const Top = styled.div `
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -83,7 +89,7 @@ export const Top = styled.div`
   }
 `;
 
-export const Bottom = styled.div`
+export const Bottom = styled.div `
   /* background-color: blue; */
   display: flex;
   flex-direction: column;
@@ -112,6 +118,7 @@ export const Bottom = styled.div`
 
   svg {
     fill: #011729;
+    /* width: 40px; */
     /* background-color: #011729; */
   }
 

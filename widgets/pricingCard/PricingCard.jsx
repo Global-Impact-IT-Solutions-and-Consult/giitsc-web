@@ -1,13 +1,7 @@
 import React from "react";
 import { Bottom, Top, Wrapper } from "./PricingCard.Styles";
 
-const PricingCard = ({
-  href,
-  title,
-  subText,
-  price,
-  description,
-}) => {
+const PricingCard = ({ href, title, subText, price, description }) => {
   return (
     <Wrapper href={href}>
       <Top className="top">

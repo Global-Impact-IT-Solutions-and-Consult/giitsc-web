@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // styles
 import {
@@ -34,15 +34,14 @@ const MyNavbar = () => {
   const [dropdownMobile, setDropdownMobile] = useState(false);
   const [slideAnimate, setSlideAnimate] = useState(false);
 
+  const onWebMenuClick = () => {
+    setSlideAnimate(!slideAnimate);
+    setDropdown(false);
+  };
+
   const onMobileMenuClick = () => {
     setExtendNav(!extendNav);
     setDropdownMobile(!dropdownMobile);
-  };
-
-  const spring = {
-    type: "spring",
-    damping: 10,
-    stiffness: 100,
   };
 
   return (
@@ -66,8 +65,11 @@ const MyNavbar = () => {
         <Right>
           <RightInner>
             <LinkHolder
-              initial={{ opacity: 0, x: 1000 }}
-              animate={{ opacity: 1, x: slideAnimate ? 0 : 1000 }}
+              initial={{ opacity: 0, x: 450 }}
+              animate={{
+                opacity: slideAnimate ? 1 : 0,
+                x: slideAnimate ? 0 : 450,
+              }}
               transition={{ duration: 1 }}
             >
               <NavbarLInk href="/">Home</NavbarLInk>
@@ -81,37 +83,34 @@ const MyNavbar = () => {
                 </div>
                 <div className="dropdownMenu">
                   <DropdownLInk
-                    onClick={() => setDropdown(!dropdown)}
+                    onClick={() => setDropdown(false)}
                     href="/mobile"
                   >
                     Mobile Development
                   </DropdownLInk>
                   <DropdownLInk
-                    onClick={() => setDropdown(!dropdown)}
+                    onClick={() => setDropdown(false)}
                     href="/networking"
                   >
                     Networking
                   </DropdownLInk>
                   <DropdownLInk
-                    onClick={() => setDropdown(!dropdown)}
+                    onClick={() => setDropdown(false)}
                     href="/management"
                   >
                     Project Management
                   </DropdownLInk>
                   <DropdownLInk
-                    onClick={() => setDropdown(!dropdown)}
+                    onClick={() => setDropdown(false)}
                     href="/training"
                   >
                     Training
                   </DropdownLInk>
-                  <DropdownLInk
-                    onClick={() => setDropdown(!dropdown)}
-                    href="/web"
-                  >
+                  <DropdownLInk onClick={() => setDropdown(false)} href="/web">
                     Web Development
                   </DropdownLInk>
                   <DropdownLInk
-                    onClick={() => setDropdown(!dropdown)}
+                    onClick={() => setDropdown(false)}
                     href="/marketing"
                   >
                     Digital Marketing
@@ -129,7 +128,7 @@ const MyNavbar = () => {
                 )}
               </HamburgerMobile> */}
             </LinkHolder>
-            <Hamburger onClick={() => setSlideAnimate(!slideAnimate)}>
+            <Hamburger onClick={onWebMenuClick}>
               {slideAnimate ? (
                 <>&#10005;</>
               ) : (
