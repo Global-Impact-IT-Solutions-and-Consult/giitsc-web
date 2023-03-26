@@ -34,6 +34,23 @@ const MyNavbar = () => {
   const [dropdownMobile, setDropdownMobile] = useState(false);
   const [slideAnimate, setSlideAnimate] = useState(false);
 
+  const [changeBg, setChangeBg] = useState(false);
+
+  if (typeof window !== "undefined") {
+    // browser code
+    const changeBgHandler = () => {
+      if (window.scrollY >= 100) {
+        setChangeBg(true);
+      } else {
+        setChangeBg(false);
+      }
+    };
+
+    window.addEventListener("scroll", changeBgHandler);
+  }
+
+  // const { scrollYProgress } = useScroll();
+
   const onWebMenuClick = () => {
     setSlideAnimate(!slideAnimate);
     setDropdown(false);
@@ -45,7 +62,13 @@ const MyNavbar = () => {
   };
 
   return (
-    <Wrapper extendNav={extendNav}>
+    <Wrapper
+      extendNav={extendNav}
+      changeBg={changeBg}
+      // style={{ scaleX: scrollYProgress }}
+      // className={changeBg ? "solidBg" : ""}
+      // className="solidBg"
+    >
       <Head>
         <title>Global Impact I.T Solutions & Consult</title>
         <meta name="description" content="Global Impact " />
@@ -63,60 +86,73 @@ const MyNavbar = () => {
           </Link>
         </Left>
         <Right>
-          <LinkHolder>
-            <NavbarLInk href="/">Home</NavbarLInk>
-            <Dropdown dropdown={dropdown}>
-              <div
-                className="dropdownbtn"
-                onClick={() => setDropdown(!dropdown)}
-              >
-                <span>Services</span>
-                <i className="fa fa-caret-down"></i>
-              </div>
-              <div className="dropdownMenu">
-                <DropdownLInk
+          <RightInner>
+            <LinkHolder
+              initial={{ opacity: 0, x: 450 }}
+              animate={{
+                opacity: slideAnimate ? 1 : 0,
+                x: slideAnimate ? 0 : 450,
+              }}
+              transition={{ duration: 1 }}
+            >
+              <NavbarLInk href="/">Home</NavbarLInk>
+              <Dropdown dropdown={dropdown}>
+                <div
+                  className="dropdownbtn"
                   onClick={() => setDropdown(!dropdown)}
-                  href="/mobile"
                 >
-                  Mobile Development
-                </DropdownLInk>
-                <DropdownLInk
-                  onClick={() => setDropdown(!dropdown)}
-                  href="/networking"
-                >
-                  Networking
-                </DropdownLInk>
-                <DropdownLInk
-                  onClick={() => setDropdown(!dropdown)}
-                  href="/management"
-                >
-                  Project Management
-                </DropdownLInk>
-                <DropdownLInk
-                  onClick={() => setDropdown(!dropdown)}
-                  href="/training"
-                >
-                  Training
-                </DropdownLInk>
-                <DropdownLInk
-                  onClick={() => setDropdown(!dropdown)}
-                  href="/web"
-                >
-                  Web Development
-                </DropdownLInk>
-                <DropdownLInk
-                  onClick={() => setDropdown(!dropdown)}
-                  href="/marketing"
-                >
-                  Digital Marketing
-                </DropdownLInk>
-              </div>
-            </Dropdown>
-            <NavbarLInk href="/about">About us</NavbarLInk>
-            <NavbarLInk href="/contact">Contact</NavbarLInk>
+                  <span>Services</span>
+                  <i class="fa fa-caret-down"></i>
+                </div>
+                <div className="dropdownMenu">
+                  <DropdownLInk
+                    onClick={() => setDropdown(false)}
+                    href="/mobile"
+                  >
+                    Mobile Development
+                  </DropdownLInk>
+                  <DropdownLInk
+                    onClick={() => setDropdown(false)}
+                    href="/networking"
+                  >
+                    Networking
+                  </DropdownLInk>
+                  <DropdownLInk
+                    onClick={() => setDropdown(false)}
+                    href="/management"
+                  >
+                    Project Management
+                  </DropdownLInk>
+                  <DropdownLInk
+                    onClick={() => setDropdown(false)}
+                    href="/training"
+                  >
+                    Training
+                  </DropdownLInk>
+                  <DropdownLInk onClick={() => setDropdown(false)} href="/web">
+                    Web Development
+                  </DropdownLInk>
+                  <DropdownLInk
+                    onClick={() => setDropdown(false)}
+                    href="/marketing"
+                  >
+                    Digital Marketing
+                  </DropdownLInk>
+                </div>
+              </Dropdown>
+              <NavbarLInk href="/about">About us</NavbarLInk>
+              <NavbarLInk href="/contact">Contact</NavbarLInk>
 
-            <Hamburger onClick={() => setExtendNav(!extendNav)}>
-              {extendNav ? (
+              {/* <HamburgerMobile onClick={() => setExtendNav(!extendNav)}>
+                {extendNav ? (
+                  <>&#10005;</>
+                ) : (
+                  <Image src={menu} alt="logo" width="25" height="32" />
+                )}
+              </HamburgerMobile> */}
+            </LinkHolder>
+            <Hamburger onClick={onWebMenuClick}>
+              {slideAnimate ? (
                 <>&#10005;</>
               ) : (
                 <Image src={menu} alt="logo" width="25" height="32" />
@@ -129,7 +165,7 @@ const MyNavbar = () => {
                 <Image src={menu} alt="logo" width="25" height="32" />
               )}
             </HamburgerMobile>
-          </LinkHolder>
+          </RightInner>
         </Right>
       </InnerWrapper>
 

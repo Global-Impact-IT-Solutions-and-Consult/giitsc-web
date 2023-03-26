@@ -1,105 +1,128 @@
-import Link from "next/link";
+import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
+import { FlyControls } from "three/addons/controls/FlyControls.js";
 
 // styles
+import { Wrapper, Overlay, Content } from "./HeroSection.Styles";
 
 // Components and widgets
 import { Button } from "../../widgets/buttonWidget/ButtonWidget.Styles";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-import gsap, { Expo } from "gsap";
-import { HeroText, HeroWrapper } from "./HeroSection.Styles";
 
 const HeroSection = () => {
+  const { scrollYProgress } = useScroll();
+  const scale = useTransform(scrollYProgress, [0, 100], [1, 0]);
+
   const containerRef = useRef();
 
   if (typeof window !== "undefined") {
     useEffect(() => {
-      const scene = new THREE.Scene();
+      const clock = new THREE.Clock();
+
       const camera = new THREE.PerspectiveCamera(
-        75,
+        45,
         window.innerWidth / window.innerHeight,
-        0.1,
-        1000
+        1,
+        15000
       );
-      camera.position.z = 5;
-      const renderer = new THREE.WebGLRenderer({
-        antialias: true,
-      });
-      renderer.setClearColor("#011729");
+      camera.position.z = 1000;
+
+      const scene = new THREE.Scene();
+      scene.fog = new THREE.Fog(0x000000, 1, 15000);
+
+      const renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setPixelRatio(window.devicePixelRatio);
       renderer.setSize(window.innerWidth, window.innerHeight);
       window.addEventListener("resize", () => {
-        renderer.setSize(window.innerWidth, window.innerHeight);
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
       });
+
+      const onWindowResize = () => {
+        camera.aspect = (window.innerWidth / window.innerHeight) * 0.5;
+        camera.updateProjectionMatrix();
+
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      };
+
       containerRef.current.appendChild(renderer.domElement);
-      const raycaster = new THREE.Raycaster();
-      const mouse = new THREE.Vector2();
 
-      const geometry = new THREE.BoxGeometry(1, 1, 1);
+      const controls = new FlyControls(camera, renderer.domElement);
+      controls.movementSpeed = 1000;
+      controls.rollSpeed = Math.PI / 10;
+
+      const pointLight = new THREE.PointLight("#4169e1");
+      pointLight.position.set(0, 0, 0);
+      scene.add(pointLight);
+
+      const dirLight = new THREE.DirectionalLight(0xffffff);
+      dirLight.position.set(0, 0, 1).normalize();
+      scene.add(dirLight);
+
+      const geometry = [
+        [new THREE.IcosahedronGeometry(100, 16), 50],
+        [new THREE.IcosahedronGeometry(100, 8), 300],
+        [new THREE.IcosahedronGeometry(100, 4), 1000],
+        [new THREE.IcosahedronGeometry(100, 2), 2000],
+        [new THREE.IcosahedronGeometry(100, 1), 8000],
+      ];
+
       const material = new THREE.MeshLambertMaterial({
-        color: 0xf7f7f7,
+        color: 0xffffff,
+        wireframe: true,
       });
 
-      const meshX = -10;
+      for (let j = 0; j < 1000; j++) {
+        const lod = new THREE.LOD();
 
-      for (let i = 0; i < 20; i++) {
-        const mesh = new THREE.Mesh(geometry, material);
-        mesh.position.x = (Math.random() - 0.5) * 10;
-        mesh.position.y = (Math.random() - 0.5) * 10;
-        mesh.position.z = (Math.random() - 0.5) * 10;
-        mesh.position.x = (Math.random() - 0.5) * 10;
-        scene.add(mesh);
+        for (let i = 0; i < geometry.length; i++) {
+          const mesh = new THREE.Mesh(geometry[i][0], material);
+          mesh.scale.set(1.5, 1.5, 1.5);
+          mesh.updateMatrix();
+          mesh.matrixAutoUpdate = false;
+          lod.addLevel(mesh, geometry[i][1]);
+        }
+
+        lod.position.x = 10000 * (0.5 - Math.random());
+        lod.position.y = 7500 * (0.5 - Math.random());
+        lod.position.z = 10000 * (0.5 - Math.random());
+        lod.updateMatrix();
+        lod.matrixAutoUpdate = false;
+        scene.add(lod);
       }
-
-      const light1 = new THREE.PointLight(0xffffff, 1, 1000);
-      light1.position.set(0, 0, 0);
-      scene.add(light1);
-
-      const light2 = new THREE.PointLight(0xffffff, 2, 1000);
-      light2.position.set(0, 0, 25);
-      scene.add(light2);
 
       const render = () => {
         requestAnimationFrame(render);
+        controls.update(clock.getDelta());
         renderer.render(scene, camera);
-      };
-
-      const handleChange = (event) => {
-        mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-        mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-
-        raycaster.setFromCamera(mouse, camera);
-
-        const intersects = raycaster.intersectObjects(scene.children, true);
-
-        for (const intersect of intersects) {
-          const tl = gsap.timeline({
-            delay: 0.3,
-          });
-          tl.to(intersect.object.scale, 1, { x: 2, ease: Expo.easeOut });
-          tl.to(intersect.object.scale, 0.5, { x: 0.5, ease: Expo.easeOut });
-          tl.to(intersect.object.position, 0.5, { x: 0.5, ease: Expo.easeOut });
-          tl.to(
-            intersect.object.rotation,
-            0.5,
-            { y: Math.PI * 0.5, ease: Expo.easeOut },
-            "=-1.5"
-          );
-        }
       };
 
       render();
 
-      window.addEventListener("mousemove", handleChange);
+      window.addEventListener("resize", onWindowResize);
     }, []);
   }
 
   return (
-    <HeroWrapper className="three" ref={containerRef}>
-      <HeroText>ThreeJs Rocks</HeroText>
-    </HeroWrapper>
+    <Wrapper ref={containerRef}>
+      {/* <Overlay> */}
+      <Content>
+        <motion.h1
+          className="my-3"
+          // initial={{ opacity: 0, scale: 0 }}
+          // animate={{
+          //   opacity: [0.5, 1, 0.5, 1],
+          //   scale: [1, 2, 1.2],
+          //   color: ["#fff", "#98eff9", "#74e6f7", "#fff"],
+          // }}
+          // transition={{ duration: 5 }}
+        >
+          Technology solutions for a smarter future
+        </motion.h1>
+      </Content>
+      {/* </Overlay> */}
+    </Wrapper>
   );
 };
 

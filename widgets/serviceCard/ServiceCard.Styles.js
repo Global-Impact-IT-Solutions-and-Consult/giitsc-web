@@ -1,6 +1,7 @@
+import Link from "next/link";
 import styled from "styled-components";
 
-export const Wrapper = styled.div `
+export const Wrapper = styled(Link)`
   background: #fff;
   color: #141517;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
@@ -8,7 +9,8 @@ export const Wrapper = styled.div `
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  cursor: crosshair;
+  /* cursor: crosshair; */
+  cursor: pointer;
   margin: 1.5rem 0;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.11);
@@ -17,6 +19,8 @@ export const Wrapper = styled.div `
   height: 210px;
   transition: all 300ms ease-in;
   text-align: left;
+  text-decoration: none;
+  color: #011729;
 
   // MOBILE
   @media only screen and (max-width: 767px) {
@@ -24,13 +28,15 @@ export const Wrapper = styled.div `
   }
 
   &:hover {
-    background: #011729;
+    /* background: #011729; */
+    border: 1px solid #011729;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.11);
-    color: #fff;
+    color: #011729;
 
-    .icon {
-      background: #fff;
-      border-radius: 20%;
+    .icon > rect {
+      /* background: #fff; */
+      /* border-radius: 20%; */
+      fill: white;
       /* width: 45px;
       height: 45px; */
       /* padding: 0.2rem; */
@@ -38,7 +44,7 @@ export const Wrapper = styled.div `
   }
 `;
 
-export const Top = styled.div `
+export const Top = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
@@ -57,7 +63,7 @@ export const Top = styled.div `
   }
 `;
 
-export const Bottom = styled.div `
+export const Bottom = styled.div`
   /* background-color: blue; */
   display: flex;
   flex-direction: column;

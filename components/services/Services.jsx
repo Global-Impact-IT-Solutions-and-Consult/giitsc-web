@@ -3,15 +3,23 @@ import { Wrapper, CardHolder, CardPair } from "./Services.Styles";
 
 // widgets
 import ServiceCard from "../../widgets/serviceCard/ServiceCard";
+import UnderlineWidget from "../../widgets/underlineWidget/UnderlineWidget";
 
 // icons
-import mobile from "../../public/services/pngs/mobile-development.png";
-import network from "../../public/services/pngs/cyber-security.png";
-import project from "../../public/services/pngs/development.png";
-import training from "../../public/services/pngs/education.png";
-import web from "../../public/services/pngs/coding.png";
-import marketing from "../../public/services/pngs/bullhorn.png";
-import UnderlineWidget from "../../widgets/underlineWidget/UnderlineWidget";
+// import mobile from "../../public/services/pngs/mobile-development.png";
+// import network from "../../public/services/pngs/cyber-security.png";
+// import project from "../../public/services/pngs/development.png";
+// import training from "../../public/services/pngs/education.png";
+// import web from "../../public/services/pngs/coding.png";
+// import marketing from "../../public/services/pngs/bullhorn.png";
+
+// svgs
+import mobile from "../../public/services/svgs/mobile-development.svg";
+import network from "../../public/services/svgs/cyber-security.svg";
+import project from "../../public/services/svgs/development.svg";
+import training from "../../public/services/svgs/education.svg";
+import web from "../../public/services/svgs/coding.svg";
+import marketing from "../../public/services/svgs/bullhorn.svg";
 
 const Services = () => {
   return (
@@ -25,6 +33,7 @@ const Services = () => {
           description={
             "The team at Giitsc has the skills and years of experience in mobile application development"
           }
+          href={"/mobile"}
         />
         <ServiceCard
           icon={network}
@@ -32,6 +41,7 @@ const Services = () => {
           description={
             "Our certified experts will analyze your business to determine the best way to keep your network safe from attacks"
           }
+          href={"/networking"}
         />
         <ServiceCard
           icon={project}
@@ -39,6 +49,7 @@ const Services = () => {
           description={
             "We have the best team of project managers with vast experience in project management & consulting"
           }
+          href={"/management"}
         />
 
         <ServiceCard
@@ -47,6 +58,7 @@ const Services = () => {
           description={
             "We have a unique training that will help you as an individual, organizations and government agencies in reaching your potentials"
           }
+          href={"/training"}
         />
         <ServiceCard
           icon={web}
@@ -54,14 +66,16 @@ const Services = () => {
           description={
             "Our website development professionals recognize the value of solid information architecture design and integrative branding"
           }
+          href={"/web"}
         />
 
         <ServiceCard
           icon={marketing}
-          title={"Agile Coach"}
+          title={"Digital Marketing"}
           description={
             "Digital marketing is the delivery of advertisements through digital channels like search engines, websites, social media, email, and mobile apps."
           }
+          href={"/marketing"}
         />
         {/* <ServiceCard
           icon={coach}

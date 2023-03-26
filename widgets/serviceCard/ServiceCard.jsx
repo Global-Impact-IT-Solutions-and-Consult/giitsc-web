@@ -3,9 +3,9 @@ import Image from "next/image";
 // Styles
 import { Wrapper, Top, Bottom } from "./ServiceCard.Styles";
 
-const ServiceCard = ({ icon, title, description }) => {
+const ServiceCard = ({ icon, title, description, href }) => {
   return (
-    <Wrapper>
+    <Wrapper href={href}>
       <Top>
         <div className="icon">
           <Image src={icon} alt="logo" />

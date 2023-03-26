@@ -2,15 +2,21 @@ import Link from "next/link";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const Wrapper = styled.nav `
+export const Wrapper = styled.nav`
   width: 100%;
   height: ${(props) => (props.extendNav ? "100vh" : "86px")};
-  background: var(--theme-color);
+  /* background: ${(props) => (props.changeBg ? "#011729" : "#00000033")}; */
+  /* background-color: #00000033; */
+  background-color: rgba(0, 0, 0, 0.75);
   display: flex;
   flex-direction: column;
   position: fixed;
   transition: all 400ms ease-in;
-  z-index: 5;
+  z-index: 2;
+
+  .solidBg {
+    background-color: var(--theme-color);
+  }
 
   // Media query
   @media (min-width: 700px) {
@@ -18,14 +24,14 @@ export const Wrapper = styled.nav `
   }
 `;
 
-export const InnerWrapper = styled.div `
+export const InnerWrapper = styled.div`
   width: 100%;
   height: 86px;
   display: flex;
   align-items: center;
 `;
 
-export const Left = styled.div `
+export const Left = styled.div`
   flex: 30%;
   /* background: green; */
   padding-left: 50px;
@@ -33,8 +39,7 @@ export const Left = styled.div `
   /* padding-top: 20px; */
 `;
 
-export const Right = styled(motion.div)
-`
+export const Right = styled(motion.div)`
   display: flex;
   /* gap: 3rem; */
   align-items: center;
@@ -44,8 +49,7 @@ export const Right = styled(motion.div)
   padding-right: 5%;
 `;
 
-export const RightInner = styled(motion.div)
-`
+export const RightInner = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -58,14 +62,12 @@ export const RightInner = styled(motion.div)
   } */
 `;
 
-export const LinkHolder = styled(motion.div)
-`
+export const LinkHolder = styled(motion.div)`
   display: flex;
   /* background: red; */
 `;
 
-export const NavbarLInk = styled(Link)
-`
+export const NavbarLInk = styled(Link)`
   text-decoration: none;
   position: relative;
   text-align: center;
@@ -91,7 +93,7 @@ export const NavbarLInk = styled(Link)
   }
 `;
 
-export const Hamburger = styled.button `
+export const Hamburger = styled.button`
   width: 40px;
   height: 50px;
   background: none;
@@ -113,7 +115,7 @@ export const Hamburger = styled.button `
   }
 `;
 
-export const Dropdown = styled.div `
+export const Dropdown = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
@@ -157,6 +159,7 @@ export const Dropdown = styled.div `
       ),
       linear-gradient(0deg, rgba(1, 23, 41, 0.62), rgba(1, 23, 41, 0.62)),
       rgba(1, 23, 41, 0.62);
+    background: rgba(0, 0, 0, 0.75);
   }
 
   // Media query
@@ -165,8 +168,7 @@ export const Dropdown = styled.div `
   }
 `;
 
-export const DropdownLInk = styled(Link)
-`
+export const DropdownLInk = styled(Link)`
   text-decoration: none;
   position: relative;
   text-align: left;
@@ -188,7 +190,7 @@ export const DropdownLInk = styled(Link)
 `;
 
 // Mobile menu dropdown
-export const ExtendedWrapper = styled.div `
+export const ExtendedWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -206,7 +208,7 @@ export const ExtendedWrapper = styled.div `
   }
 `;
 
-export const HamburgerMobile = styled.button `
+export const HamburgerMobile = styled.button`
   width: 70px;
   height: 50px;
   background: none;
@@ -228,7 +230,7 @@ export const HamburgerMobile = styled.button `
   }
 `;
 
-export const DropdownMobile = styled.div `
+export const DropdownMobile = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -279,8 +281,7 @@ export const DropdownMobile = styled.div `
   }
 `;
 
-export const DropdownLInkMobile = styled(Link)
-`
+export const DropdownLInkMobile = styled(Link)`
   text-decoration: none;
   position: relative;
   text-align: center;
@@ -305,8 +306,7 @@ export const DropdownLInkMobile = styled(Link)
   }
 `;
 
-export const NavbarLInkMobile = styled(Link)
-`
+export const NavbarLInkMobile = styled(Link)`
   text-decoration: none;
   position: relative;
   text-align: center;
