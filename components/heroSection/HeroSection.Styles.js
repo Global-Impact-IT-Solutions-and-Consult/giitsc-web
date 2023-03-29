@@ -11,6 +11,7 @@ export const Wrapper = styled.div`
   /* padding-top: 60px; */
   position: relative;
   overflow: hidden;
+  cursor: crosshair;
 
   a {
     text-decoration: none;

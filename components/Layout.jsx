@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
           <MyNavbar />
           {/* <NavbarRedo /> */}
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </Overlay>
       </Wrapper>
     </>

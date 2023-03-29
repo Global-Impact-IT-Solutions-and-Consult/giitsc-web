@@ -34,20 +34,23 @@ const MyNavbar = () => {
   const [dropdownMobile, setDropdownMobile] = useState(false);
   const [slideAnimate, setSlideAnimate] = useState(false);
 
-  const [changeBg, setChangeBg] = useState(false);
+  const [changeBg, setChangeBg] = useState(true);
+  console.log("🚀 ~ file: MyNavbar.jsx:38 ~ MyNavbar ~ changeBg:", changeBg);
 
-  if (typeof window !== "undefined") {
-    // browser code
-    const changeBgHandler = () => {
-      if (window.scrollY >= 100) {
-        setChangeBg(true);
-      } else {
-        setChangeBg(false);
-      }
-    };
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // browser code
+      const changeBgHandler = () => {
+        if (window.scrollY >= 90) {
+          setChangeBg(true);
+        } else {
+          setChangeBg(false);
+        }
+      };
 
-    window.addEventListener("scroll", changeBgHandler);
-  }
+      window.addEventListener("scroll", changeBgHandler);
+    }
+  });
 
   // const { scrollYProgress } = useScroll();
 
@@ -66,7 +69,7 @@ const MyNavbar = () => {
       extendNav={extendNav}
       changeBg={changeBg}
       // style={{ scaleX: scrollYProgress }}
-      // className={changeBg ? "solidBg" : ""}
+      className={changeBg ? "solidBg" : ""}
       // className="solidBg"
     >
       <Head>
