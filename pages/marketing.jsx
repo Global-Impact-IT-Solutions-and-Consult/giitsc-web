@@ -6,7 +6,13 @@ import Pricing from "../components/pricing/Pricing";
 const marketing = () => {
   return (
     <>
-      <ServicePage title={"Digital Marketing"} image={marketingImg} />
+      <ServicePage
+        title={"Digital Marketing"}
+        image={marketingImg}
+        description={
+          "At our tech website company, we believe that digital marketing is a crucial component of any business's success in today's digital age. From increasing brand awareness to generating leads and retaining customers, digital marketing can help businesses achieve their goals and stay competitive in the marketplace. That's why we offer a range of digital marketing services, including website design and development, SEO optimization, social media management, email marketing campaigns, and PPC advertising management. Our team of digital marketing experts takes a strategic approach to every project, starting with research and analysis to understand our clients' goals, target audience, and competitive landscape. We then create a customized digital marketing plan that is tailored to the unique needs and objectives of each client. Whether it's improving search engine rankings, building brand awareness on social media, or driving more traffic to a website, we use proven strategies and tactics to achieve results. Throughout the process, we prioritize communication and collaboration with our clients to ensure that their vision is brought to life."
+        }
+      />
       <Pricing
         c1_href="/"
         c1_title={"Lite"}

@@ -10,7 +10,7 @@ const mobile = () => {
         title={"Mobile Development"}
         image={mobileImg}
         description={
-          "At our tech company, we specialize in creating custom web solutions that are tailored to meet the unique needs of your business. Our team of experienced developers has the skills and expertise to deliver high-quality, responsive websites that are built to perform."
+          "Are you searching for any Mobile application consulting and development company, search no further because  you have found one of the leading mobile application development company in the world today. We develop word class mobile applications, we turn your ideas into a reality by meeting your expectations and beyond, nor matter the platforms or complexity of the project we are capable. We have development experts that are ever ready to help in providing you free consulting services before the kick off of the project, among the things we do first is to analyze the project requirement, goals and your budget, then we can help you match them with the most fit development technology that will guarantee your applications success. "
         }
       />
       <Pricing

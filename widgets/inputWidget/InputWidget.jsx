@@ -1,5 +1,5 @@
 import React from "react";
-import { Wrapper, Input, Label } from "./Inputwidget.Styles";
+import { Wrapper, Input, Label } from "./InputWidget.Styles";
 
 const InputWidget = ({
   label,

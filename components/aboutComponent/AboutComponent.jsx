@@ -20,8 +20,11 @@ const AboutComponent = () => {
           <ContentItem>
             <div className="title">Who we are</div>
             <div className="body">
-              Malesuada aenean mattis tempus imperdiet volutpat etiam pretium
-              pellentesque. Vel in mauris nullam{" "}
+              We combine creativity, innovation, and service, with a thirst for
+              knowledge to stay current in the ever changing world of
+              technology. At Global Impact, we have the resources to handle all
+              your I.T needs, providing the peace of mind you need to
+              concentrate on running your business.{" "}
             </div>
           </ContentItem>
           <ContentItem>
@@ -55,8 +58,8 @@ const AboutComponent = () => {
               the competitive advantage you need to take your business to the
               next level. We combine creativity, innovation, and service, with a
               thirst for knowledge to stay current in the ever changing world of
-              technology. At GITSC, we have the resources to handle all your I.T
-              needs, providing the peace of mind you need to concentrate on
+              technology. At GIITSC, we have the resources to handle all your
+              I.T needs, providing the peace of mind you need to concentrate on
               running your business.
             </div>
           </StoryBody>

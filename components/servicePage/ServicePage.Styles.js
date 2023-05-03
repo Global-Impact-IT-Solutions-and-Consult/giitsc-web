@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div `
+export const Wrapper = styled.div`
   background-color: var(--bg-light-blue);
   width: 100%;
   display: flex;
@@ -56,7 +56,7 @@ export const Wrapper = styled.div `
   }
 `;
 
-export const Content = styled.div `
+export const Content = styled.div`
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -86,12 +86,12 @@ export const Content = styled.div `
   }
 `;
 
-export const Main = styled.div `
+export const Main = styled.div`
   /* background: red; */
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   gap: 1.5rem;
   margin-bottom: 3rem;
 
@@ -106,12 +106,13 @@ export const Main = styled.div `
   }
 `;
 
-export const Left = styled.div `
+export const Left = styled.div`
   /* background: yellow; */
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  justify-content: flex-start;
 
   // MOBILE
   @media only screen and (max-width: 767px) {
@@ -160,7 +161,7 @@ export const Left = styled.div `
   }
 `;
 
-export const Right = styled.div `
+export const Right = styled.div`
   /* background: green; */
   width: 100%;
   /* height: 34rem; */

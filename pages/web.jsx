@@ -6,7 +6,13 @@ import Pricing from "../components/pricing/Pricing";
 const web = () => {
   return (
     <>
-      <ServicePage title={"Web Development"} image={webImg} />
+      <ServicePage
+        title={"Web Development"}
+        image={webImg}
+        description={
+          "A good quality website helps clients to effectively pick, choose and order your products online. Millions of people search the internet looking for products or services, which you may have but would be unable to reach you in the absence of a rich designed, professional website. Our website development professionals recognize the value of solid information architecture design and integrative branding that engages the customer from the first stop at your site. Engagement with your customer is crucial to tying into their emotional connection to your site and developing loyalty. The development cost of developing on top of an open source technology or platform is less as compared to development with the use of licensed software. This lowers the overall cost for the client while using open source platform in comparison to other parallel technologies."
+        }
+      />
       <Pricing
         c1_href="/"
         c1_title={"Lite"}

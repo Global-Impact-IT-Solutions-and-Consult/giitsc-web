@@ -67,6 +67,9 @@ const Footer = () => {
                 <li>
                   <Link href="/web">Web Development</Link>
                 </li>
+                <li>
+                  <Link href="/marketing">Digital Marketing</Link>
+                </li>
               </ul>
             </div>
           </div>

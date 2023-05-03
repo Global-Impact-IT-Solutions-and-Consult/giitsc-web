@@ -6,7 +6,13 @@ import Pricing from "../components/pricing/Pricing";
 const training = () => {
   return (
     <>
-      <ServicePage title={"Corporate Training"} image={trainingImg} />
+      <ServicePage
+        title={"Corporate Training"}
+        image={trainingImg}
+        description={
+          "GIITSC Corporate Training helps high-potential leaders and teams adopt new paradigms, implement new practices, and achieve competitive advantage and market success through strategic talent management. Our designation programs are the gold standard for proving knowledge and successfully implementing solutions to real-world talent and leadership challenges. GIITSC Corporate Training is designed to meet your organizational needs and preferences and is priced to encourage wide adoption. Courses can be tailored from half-day to two-day session, and can be delivered in-person or online with a live, master teacher. “Train the Trainer” options offer the ability to reach tens of thousands of employees. The result is the freedom to pair GIITSC content and faculty with your organization in the format and timeframe that best meets your needs."
+        }
+      />
       <Pricing
         c1_href="/"
         c1_title={"Lite"}
